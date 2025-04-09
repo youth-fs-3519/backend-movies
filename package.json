@@ -1,0 +1,34 @@
+{
+  "name": "backend-movies",
+  "version": "1.0.0",
+  "description": "Backend para api de filmes da fs 3519",
+  "main": "index.ts",
+  "scripts": {
+    "dev": "tsx index.ts --watch",
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/youth-fs-3519/backend-movies.git"
+  },
+  "keywords": [
+    "backend",
+    "api",
+    "movies"
+  ],
+  "author": "FS 3519",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/youth-fs-3519/backend-movies/issues"
+  },
+  "homepage": "https://github.com/youth-fs-3519/backend-movies#readme",
+  "dependencies": {
+    "express": "^5.1.0"
+  },
+  "devDependencies": {
+    "@types/express": "^5.0.1",
+    "@types/node": "^22.14.0",
+    "tsx": "^4.19.3",
+    "typescript": "^5.8.3"
+  }
+}
