@@ -1,19 +1,14 @@
+import express, { json } from 'express';
 
-type Pessoa = {
-    name: string;
-    age?: number;
-    email: string;
-}
+const app = express();
 
-interface Veiculo {
-    acelerar: () => void;
-    freiar: () => void;
-}
+app.use(json());
 
-interface Carro extends Veiculo {
-    cor: string;
-}
+app.get('/', (req, res) => {
+    res.send('Hello World')
+});
 
-const carro1: Carro = {
-
-}
+app.listen(8000, () => {
+    console.log('Server is running');
+    console.log('http://localhost:8000');
+});
