@@ -19,10 +19,10 @@ export type PrismaPromise<T> = $Public.PrismaPromise<T>
  */
 export type User = $Result.DefaultSelection<Prisma.$UserPayload>
 /**
- * Model MovieGender
+ * Model MovieGenre
  * 
  */
-export type MovieGender = $Result.DefaultSelection<Prisma.$MovieGenderPayload>
+export type MovieGenre = $Result.DefaultSelection<Prisma.$MovieGenrePayload>
 /**
  * Model Movie
  * 
@@ -170,14 +170,14 @@ export class PrismaClient<
   get user(): Prisma.UserDelegate<ExtArgs, ClientOptions>;
 
   /**
-   * `prisma.movieGender`: Exposes CRUD operations for the **MovieGender** model.
+   * `prisma.movieGenre`: Exposes CRUD operations for the **MovieGenre** model.
     * Example usage:
     * ```ts
-    * // Fetch zero or more MovieGenders
-    * const movieGenders = await prisma.movieGender.findMany()
+    * // Fetch zero or more MovieGenres
+    * const movieGenres = await prisma.movieGenre.findMany()
     * ```
     */
-  get movieGender(): Prisma.MovieGenderDelegate<ExtArgs, ClientOptions>;
+  get movieGenre(): Prisma.MovieGenreDelegate<ExtArgs, ClientOptions>;
 
   /**
    * `prisma.movie`: Exposes CRUD operations for the **Movie** model.
@@ -639,7 +639,7 @@ export namespace Prisma {
 
   export const ModelName: {
     User: 'User',
-    MovieGender: 'MovieGender',
+    MovieGenre: 'MovieGenre',
     Movie: 'Movie',
     MovieList: 'MovieList'
   };
@@ -660,7 +660,7 @@ export namespace Prisma {
       omit: GlobalOmitOptions
     }
     meta: {
-      modelProps: "user" | "movieGender" | "movie" | "movieList"
+      modelProps: "user" | "movieGenre" | "movie" | "movieList"
       txIsolationLevel: Prisma.TransactionIsolationLevel
     }
     model: {
@@ -738,77 +738,77 @@ export namespace Prisma {
           }
         }
       }
-      MovieGender: {
-        payload: Prisma.$MovieGenderPayload<ExtArgs>
-        fields: Prisma.MovieGenderFieldRefs
+      MovieGenre: {
+        payload: Prisma.$MovieGenrePayload<ExtArgs>
+        fields: Prisma.MovieGenreFieldRefs
         operations: {
           findUnique: {
-            args: Prisma.MovieGenderFindUniqueArgs<ExtArgs>
-            result: $Utils.PayloadToResult<Prisma.$MovieGenderPayload> | null
+            args: Prisma.MovieGenreFindUniqueArgs<ExtArgs>
+            result: $Utils.PayloadToResult<Prisma.$MovieGenrePayload> | null
           }
           findUniqueOrThrow: {
-            args: Prisma.MovieGenderFindUniqueOrThrowArgs<ExtArgs>
-            result: $Utils.PayloadToResult<Prisma.$MovieGenderPayload>
+            args: Prisma.MovieGenreFindUniqueOrThrowArgs<ExtArgs>
+            result: $Utils.PayloadToResult<Prisma.$MovieGenrePayload>
           }
           findFirst: {
-            args: Prisma.MovieGenderFindFirstArgs<ExtArgs>
-            result: $Utils.PayloadToResult<Prisma.$MovieGenderPayload> | null
+            args: Prisma.MovieGenreFindFirstArgs<ExtArgs>
+            result: $Utils.PayloadToResult<Prisma.$MovieGenrePayload> | null
           }
           findFirstOrThrow: {
-            args: Prisma.MovieGenderFindFirstOrThrowArgs<ExtArgs>
-            result: $Utils.PayloadToResult<Prisma.$MovieGenderPayload>
+            args: Prisma.MovieGenreFindFirstOrThrowArgs<ExtArgs>
+            result: $Utils.PayloadToResult<Prisma.$MovieGenrePayload>
           }
           findMany: {
-            args: Prisma.MovieGenderFindManyArgs<ExtArgs>
-            result: $Utils.PayloadToResult<Prisma.$MovieGenderPayload>[]
+            args: Prisma.MovieGenreFindManyArgs<ExtArgs>
+            result: $Utils.PayloadToResult<Prisma.$MovieGenrePayload>[]
           }
           create: {
-            args: Prisma.MovieGenderCreateArgs<ExtArgs>
-            result: $Utils.PayloadToResult<Prisma.$MovieGenderPayload>
+            args: Prisma.MovieGenreCreateArgs<ExtArgs>
+            result: $Utils.PayloadToResult<Prisma.$MovieGenrePayload>
           }
           createMany: {
-            args: Prisma.MovieGenderCreateManyArgs<ExtArgs>
+            args: Prisma.MovieGenreCreateManyArgs<ExtArgs>
             result: BatchPayload
           }
           createManyAndReturn: {
-            args: Prisma.MovieGenderCreateManyAndReturnArgs<ExtArgs>
-            result: $Utils.PayloadToResult<Prisma.$MovieGenderPayload>[]
+            args: Prisma.MovieGenreCreateManyAndReturnArgs<ExtArgs>
+            result: $Utils.PayloadToResult<Prisma.$MovieGenrePayload>[]
           }
           delete: {
-            args: Prisma.MovieGenderDeleteArgs<ExtArgs>
-            result: $Utils.PayloadToResult<Prisma.$MovieGenderPayload>
+            args: Prisma.MovieGenreDeleteArgs<ExtArgs>
+            result: $Utils.PayloadToResult<Prisma.$MovieGenrePayload>
           }
           update: {
-            args: Prisma.MovieGenderUpdateArgs<ExtArgs>
-            result: $Utils.PayloadToResult<Prisma.$MovieGenderPayload>
+            args: Prisma.MovieGenreUpdateArgs<ExtArgs>
+            result: $Utils.PayloadToResult<Prisma.$MovieGenrePayload>
           }
           deleteMany: {
-            args: Prisma.MovieGenderDeleteManyArgs<ExtArgs>
+            args: Prisma.MovieGenreDeleteManyArgs<ExtArgs>
             result: BatchPayload
           }
           updateMany: {
-            args: Prisma.MovieGenderUpdateManyArgs<ExtArgs>
+            args: Prisma.MovieGenreUpdateManyArgs<ExtArgs>
             result: BatchPayload
           }
           updateManyAndReturn: {
-            args: Prisma.MovieGenderUpdateManyAndReturnArgs<ExtArgs>
-            result: $Utils.PayloadToResult<Prisma.$MovieGenderPayload>[]
+            args: Prisma.MovieGenreUpdateManyAndReturnArgs<ExtArgs>
+            result: $Utils.PayloadToResult<Prisma.$MovieGenrePayload>[]
           }
           upsert: {
-            args: Prisma.MovieGenderUpsertArgs<ExtArgs>
-            result: $Utils.PayloadToResult<Prisma.$MovieGenderPayload>
+            args: Prisma.MovieGenreUpsertArgs<ExtArgs>
+            result: $Utils.PayloadToResult<Prisma.$MovieGenrePayload>
           }
           aggregate: {
-            args: Prisma.MovieGenderAggregateArgs<ExtArgs>
-            result: $Utils.Optional<AggregateMovieGender>
+            args: Prisma.MovieGenreAggregateArgs<ExtArgs>
+            result: $Utils.Optional<AggregateMovieGenre>
           }
           groupBy: {
-            args: Prisma.MovieGenderGroupByArgs<ExtArgs>
-            result: $Utils.Optional<MovieGenderGroupByOutputType>[]
+            args: Prisma.MovieGenreGroupByArgs<ExtArgs>
+            result: $Utils.Optional<MovieGenreGroupByOutputType>[]
           }
           count: {
-            args: Prisma.MovieGenderCountArgs<ExtArgs>
-            result: $Utils.Optional<MovieGenderCountAggregateOutputType> | number
+            args: Prisma.MovieGenreCountArgs<ExtArgs>
+            result: $Utils.Optional<MovieGenreCountAggregateOutputType> | number
           }
         }
       }
@@ -1045,7 +1045,7 @@ export namespace Prisma {
   }
   export type GlobalOmitConfig = {
     user?: UserOmit
-    movieGender?: MovieGenderOmit
+    movieGenre?: MovieGenreOmit
     movie?: MovieOmit
     movieList?: MovieListOmit
   }
@@ -1169,32 +1169,32 @@ export namespace Prisma {
 
 
   /**
-   * Count Type MovieGenderCountOutputType
+   * Count Type MovieGenreCountOutputType
    */
 
-  export type MovieGenderCountOutputType = {
+  export type MovieGenreCountOutputType = {
     movies: number
   }
 
-  export type MovieGenderCountOutputTypeSelect<ExtArgs extends $Extensions.InternalArgs = $Extensions.DefaultArgs> = {
-    movies?: boolean | MovieGenderCountOutputTypeCountMoviesArgs
+  export type MovieGenreCountOutputTypeSelect<ExtArgs extends $Extensions.InternalArgs = $Extensions.DefaultArgs> = {
+    movies?: boolean | MovieGenreCountOutputTypeCountMoviesArgs
   }
 
   // Custom InputTypes
   /**
-   * MovieGenderCountOutputType without action
+   * MovieGenreCountOutputType without action
    */
-  export type MovieGenderCountOutputTypeDefaultArgs<ExtArgs extends $Extensions.InternalArgs = $Extensions.DefaultArgs> = {
+  export type MovieGenreCountOutputTypeDefaultArgs<ExtArgs extends $Extensions.InternalArgs = $Extensions.DefaultArgs> = {
     /**
-     * Select specific fields to fetch from the MovieGenderCountOutputType
+     * Select specific fields to fetch from the MovieGenreCountOutputType
      */
-    select?: MovieGenderCountOutputTypeSelect<ExtArgs> | null
+    select?: MovieGenreCountOutputTypeSelect<ExtArgs> | null
   }
 
   /**
-   * MovieGenderCountOutputType without action
+   * MovieGenreCountOutputType without action
    */
-  export type MovieGenderCountOutputTypeCountMoviesArgs<ExtArgs extends $Extensions.InternalArgs = $Extensions.DefaultArgs> = {
+  export type MovieGenreCountOutputTypeCountMoviesArgs<ExtArgs extends $Extensions.InternalArgs = $Extensions.DefaultArgs> = {
     where?: MovieWhereInput
   }
 
@@ -1204,12 +1204,12 @@ export namespace Prisma {
    */
 
   export type MovieCountOutputType = {
-    genders: number
+    genres: number
     lists: number
   }
 
   export type MovieCountOutputTypeSelect<ExtArgs extends $Extensions.InternalArgs = $Extensions.DefaultArgs> = {
-    genders?: boolean | MovieCountOutputTypeCountGendersArgs
+    genres?: boolean | MovieCountOutputTypeCountGenresArgs
     lists?: boolean | MovieCountOutputTypeCountListsArgs
   }
 
@@ -1227,8 +1227,8 @@ export namespace Prisma {
   /**
    * MovieCountOutputType without action
    */
-  export type MovieCountOutputTypeCountGendersArgs<ExtArgs extends $Extensions.InternalArgs = $Extensions.DefaultArgs> = {
-    where?: MovieGenderWhereInput
+  export type MovieCountOutputTypeCountGenresArgs<ExtArgs extends $Extensions.InternalArgs = $Extensions.DefaultArgs> = {
+    where?: MovieGenreWhereInput
   }
 
   /**
@@ -2332,322 +2332,344 @@ export namespace Prisma {
 
 
   /**
-   * Model MovieGender
+   * Model MovieGenre
    */
 
-  export type AggregateMovieGender = {
-    _count: MovieGenderCountAggregateOutputType | null
-    _min: MovieGenderMinAggregateOutputType | null
-    _max: MovieGenderMaxAggregateOutputType | null
+  export type AggregateMovieGenre = {
+    _count: MovieGenreCountAggregateOutputType | null
+    _avg: MovieGenreAvgAggregateOutputType | null
+    _sum: MovieGenreSumAggregateOutputType | null
+    _min: MovieGenreMinAggregateOutputType | null
+    _max: MovieGenreMaxAggregateOutputType | null
   }
 
-  export type MovieGenderMinAggregateOutputType = {
-    id: string | null
+  export type MovieGenreAvgAggregateOutputType = {
+    id: number | null
+  }
+
+  export type MovieGenreSumAggregateOutputType = {
+    id: number | null
+  }
+
+  export type MovieGenreMinAggregateOutputType = {
+    id: number | null
     name: string | null
-    description: string | null
   }
 
-  export type MovieGenderMaxAggregateOutputType = {
-    id: string | null
+  export type MovieGenreMaxAggregateOutputType = {
+    id: number | null
     name: string | null
-    description: string | null
   }
 
-  export type MovieGenderCountAggregateOutputType = {
+  export type MovieGenreCountAggregateOutputType = {
     id: number
     name: number
-    description: number
     _all: number
   }
 
 
-  export type MovieGenderMinAggregateInputType = {
+  export type MovieGenreAvgAggregateInputType = {
     id?: true
-    name?: true
-    description?: true
   }
 
-  export type MovieGenderMaxAggregateInputType = {
+  export type MovieGenreSumAggregateInputType = {
     id?: true
-    name?: true
-    description?: true
   }
 
-  export type MovieGenderCountAggregateInputType = {
+  export type MovieGenreMinAggregateInputType = {
     id?: true
     name?: true
-    description?: true
+  }
+
+  export type MovieGenreMaxAggregateInputType = {
+    id?: true
+    name?: true
+  }
+
+  export type MovieGenreCountAggregateInputType = {
+    id?: true
+    name?: true
     _all?: true
   }
 
-  export type MovieGenderAggregateArgs<ExtArgs extends $Extensions.InternalArgs = $Extensions.DefaultArgs> = {
+  export type MovieGenreAggregateArgs<ExtArgs extends $Extensions.InternalArgs = $Extensions.DefaultArgs> = {
     /**
-     * Filter which MovieGender to aggregate.
+     * Filter which MovieGenre to aggregate.
      */
-    where?: MovieGenderWhereInput
+    where?: MovieGenreWhereInput
     /**
      * {@link https://www.prisma.io/docs/concepts/components/prisma-client/sorting Sorting Docs}
      * 
-     * Determine the order of MovieGenders to fetch.
+     * Determine the order of MovieGenres to fetch.
      */
-    orderBy?: MovieGenderOrderByWithRelationInput | MovieGenderOrderByWithRelationInput[]
+    orderBy?: MovieGenreOrderByWithRelationInput | MovieGenreOrderByWithRelationInput[]
     /**
      * {@link https://www.prisma.io/docs/concepts/components/prisma-client/pagination#cursor-based-pagination Cursor Docs}
      * 
      * Sets the start position
      */
-    cursor?: MovieGenderWhereUniqueInput
+    cursor?: MovieGenreWhereUniqueInput
     /**
      * {@link https://www.prisma.io/docs/concepts/components/prisma-client/pagination Pagination Docs}
      * 
-     * Take `±n` MovieGenders from the position of the cursor.
+     * Take `±n` MovieGenres from the position of the cursor.
      */
     take?: number
     /**
      * {@link https://www.prisma.io/docs/concepts/components/prisma-client/pagination Pagination Docs}
      * 
-     * Skip the first `n` MovieGenders.
+     * Skip the first `n` MovieGenres.
      */
     skip?: number
     /**
      * {@link https://www.prisma.io/docs/concepts/components/prisma-client/aggregations Aggregation Docs}
      * 
-     * Count returned MovieGenders
+     * Count returned MovieGenres
     **/
-    _count?: true | MovieGenderCountAggregateInputType
+    _count?: true | MovieGenreCountAggregateInputType
+    /**
+     * {@link https://www.prisma.io/docs/concepts/components/prisma-client/aggregations Aggregation Docs}
+     * 
+     * Select which fields to average
+    **/
+    _avg?: MovieGenreAvgAggregateInputType
+    /**
+     * {@link https://www.prisma.io/docs/concepts/components/prisma-client/aggregations Aggregation Docs}
+     * 
+     * Select which fields to sum
+    **/
+    _sum?: MovieGenreSumAggregateInputType
     /**
      * {@link https://www.prisma.io/docs/concepts/components/prisma-client/aggregations Aggregation Docs}
      * 
      * Select which fields to find the minimum value
     **/
-    _min?: MovieGenderMinAggregateInputType
+    _min?: MovieGenreMinAggregateInputType
     /**
      * {@link https://www.prisma.io/docs/concepts/components/prisma-client/aggregations Aggregation Docs}
      * 
      * Select which fields to find the maximum value
     **/
-    _max?: MovieGenderMaxAggregateInputType
+    _max?: MovieGenreMaxAggregateInputType
   }
 
-  export type GetMovieGenderAggregateType<T extends MovieGenderAggregateArgs> = {
-        [P in keyof T & keyof AggregateMovieGender]: P extends '_count' | 'count'
+  export type GetMovieGenreAggregateType<T extends MovieGenreAggregateArgs> = {
+        [P in keyof T & keyof AggregateMovieGenre]: P extends '_count' | 'count'
       ? T[P] extends true
         ? number
-        : GetScalarType<T[P], AggregateMovieGender[P]>
-      : GetScalarType<T[P], AggregateMovieGender[P]>
+        : GetScalarType<T[P], AggregateMovieGenre[P]>
+      : GetScalarType<T[P], AggregateMovieGenre[P]>
   }
 
 
 
 
-  export type MovieGenderGroupByArgs<ExtArgs extends $Extensions.InternalArgs = $Extensions.DefaultArgs> = {
-    where?: MovieGenderWhereInput
-    orderBy?: MovieGenderOrderByWithAggregationInput | MovieGenderOrderByWithAggregationInput[]
-    by: MovieGenderScalarFieldEnum[] | MovieGenderScalarFieldEnum
-    having?: MovieGenderScalarWhereWithAggregatesInput
+  export type MovieGenreGroupByArgs<ExtArgs extends $Extensions.InternalArgs = $Extensions.DefaultArgs> = {
+    where?: MovieGenreWhereInput
+    orderBy?: MovieGenreOrderByWithAggregationInput | MovieGenreOrderByWithAggregationInput[]
+    by: MovieGenreScalarFieldEnum[] | MovieGenreScalarFieldEnum
+    having?: MovieGenreScalarWhereWithAggregatesInput
     take?: number
     skip?: number
-    _count?: MovieGenderCountAggregateInputType | true
-    _min?: MovieGenderMinAggregateInputType
-    _max?: MovieGenderMaxAggregateInputType
+    _count?: MovieGenreCountAggregateInputType | true
+    _avg?: MovieGenreAvgAggregateInputType
+    _sum?: MovieGenreSumAggregateInputType
+    _min?: MovieGenreMinAggregateInputType
+    _max?: MovieGenreMaxAggregateInputType
   }
 
-  export type MovieGenderGroupByOutputType = {
-    id: string
+  export type MovieGenreGroupByOutputType = {
+    id: number
     name: string
-    description: string
-    _count: MovieGenderCountAggregateOutputType | null
-    _min: MovieGenderMinAggregateOutputType | null
-    _max: MovieGenderMaxAggregateOutputType | null
+    _count: MovieGenreCountAggregateOutputType | null
+    _avg: MovieGenreAvgAggregateOutputType | null
+    _sum: MovieGenreSumAggregateOutputType | null
+    _min: MovieGenreMinAggregateOutputType | null
+    _max: MovieGenreMaxAggregateOutputType | null
   }
 
-  type GetMovieGenderGroupByPayload<T extends MovieGenderGroupByArgs> = Prisma.PrismaPromise<
+  type GetMovieGenreGroupByPayload<T extends MovieGenreGroupByArgs> = Prisma.PrismaPromise<
     Array<
-      PickEnumerable<MovieGenderGroupByOutputType, T['by']> &
+      PickEnumerable<MovieGenreGroupByOutputType, T['by']> &
         {
-          [P in ((keyof T) & (keyof MovieGenderGroupByOutputType))]: P extends '_count'
+          [P in ((keyof T) & (keyof MovieGenreGroupByOutputType))]: P extends '_count'
             ? T[P] extends boolean
               ? number
-              : GetScalarType<T[P], MovieGenderGroupByOutputType[P]>
-            : GetScalarType<T[P], MovieGenderGroupByOutputType[P]>
+              : GetScalarType<T[P], MovieGenreGroupByOutputType[P]>
+            : GetScalarType<T[P], MovieGenreGroupByOutputType[P]>
         }
       >
     >
 
 
-  export type MovieGenderSelect<ExtArgs extends $Extensions.InternalArgs = $Extensions.DefaultArgs> = $Extensions.GetSelect<{
+  export type MovieGenreSelect<ExtArgs extends $Extensions.InternalArgs = $Extensions.DefaultArgs> = $Extensions.GetSelect<{
     id?: boolean
     name?: boolean
-    description?: boolean
-    movies?: boolean | MovieGender$moviesArgs<ExtArgs>
-    _count?: boolean | MovieGenderCountOutputTypeDefaultArgs<ExtArgs>
-  }, ExtArgs["result"]["movieGender"]>
+    movies?: boolean | MovieGenre$moviesArgs<ExtArgs>
+    _count?: boolean | MovieGenreCountOutputTypeDefaultArgs<ExtArgs>
+  }, ExtArgs["result"]["movieGenre"]>
 
-  export type MovieGenderSelectCreateManyAndReturn<ExtArgs extends $Extensions.InternalArgs = $Extensions.DefaultArgs> = $Extensions.GetSelect<{
+  export type MovieGenreSelectCreateManyAndReturn<ExtArgs extends $Extensions.InternalArgs = $Extensions.DefaultArgs> = $Extensions.GetSelect<{
     id?: boolean
     name?: boolean
-    description?: boolean
-  }, ExtArgs["result"]["movieGender"]>
+  }, ExtArgs["result"]["movieGenre"]>
 
-  export type MovieGenderSelectUpdateManyAndReturn<ExtArgs extends $Extensions.InternalArgs = $Extensions.DefaultArgs> = $Extensions.GetSelect<{
+  export type MovieGenreSelectUpdateManyAndReturn<ExtArgs extends $Extensions.InternalArgs = $Extensions.DefaultArgs> = $Extensions.GetSelect<{
     id?: boolean
     name?: boolean
-    description?: boolean
-  }, ExtArgs["result"]["movieGender"]>
+  }, ExtArgs["result"]["movieGenre"]>
 
-  export type MovieGenderSelectScalar = {
+  export type MovieGenreSelectScalar = {
     id?: boolean
     name?: boolean
-    description?: boolean
   }
 
-  export type MovieGenderOmit<ExtArgs extends $Extensions.InternalArgs = $Extensions.DefaultArgs> = $Extensions.GetOmit<"id" | "name" | "description", ExtArgs["result"]["movieGender"]>
-  export type MovieGenderInclude<ExtArgs extends $Extensions.InternalArgs = $Extensions.DefaultArgs> = {
-    movies?: boolean | MovieGender$moviesArgs<ExtArgs>
-    _count?: boolean | MovieGenderCountOutputTypeDefaultArgs<ExtArgs>
+  export type MovieGenreOmit<ExtArgs extends $Extensions.InternalArgs = $Extensions.DefaultArgs> = $Extensions.GetOmit<"id" | "name", ExtArgs["result"]["movieGenre"]>
+  export type MovieGenreInclude<ExtArgs extends $Extensions.InternalArgs = $Extensions.DefaultArgs> = {
+    movies?: boolean | MovieGenre$moviesArgs<ExtArgs>
+    _count?: boolean | MovieGenreCountOutputTypeDefaultArgs<ExtArgs>
   }
-  export type MovieGenderIncludeCreateManyAndReturn<ExtArgs extends $Extensions.InternalArgs = $Extensions.DefaultArgs> = {}
-  export type MovieGenderIncludeUpdateManyAndReturn<ExtArgs extends $Extensions.InternalArgs = $Extensions.DefaultArgs> = {}
+  export type MovieGenreIncludeCreateManyAndReturn<ExtArgs extends $Extensions.InternalArgs = $Extensions.DefaultArgs> = {}
+  export type MovieGenreIncludeUpdateManyAndReturn<ExtArgs extends $Extensions.InternalArgs = $Extensions.DefaultArgs> = {}
 
-  export type $MovieGenderPayload<ExtArgs extends $Extensions.InternalArgs = $Extensions.DefaultArgs> = {
-    name: "MovieGender"
+  export type $MovieGenrePayload<ExtArgs extends $Extensions.InternalArgs = $Extensions.DefaultArgs> = {
+    name: "MovieGenre"
     objects: {
       movies: Prisma.$MoviePayload<ExtArgs>[]
     }
     scalars: $Extensions.GetPayloadResult<{
-      id: string
+      id: number
       name: string
-      description: string
-    }, ExtArgs["result"]["movieGender"]>
+    }, ExtArgs["result"]["movieGenre"]>
     composites: {}
   }
 
-  type MovieGenderGetPayload<S extends boolean | null | undefined | MovieGenderDefaultArgs> = $Result.GetResult<Prisma.$MovieGenderPayload, S>
+  type MovieGenreGetPayload<S extends boolean | null | undefined | MovieGenreDefaultArgs> = $Result.GetResult<Prisma.$MovieGenrePayload, S>
 
-  type MovieGenderCountArgs<ExtArgs extends $Extensions.InternalArgs = $Extensions.DefaultArgs> =
-    Omit<MovieGenderFindManyArgs, 'select' | 'include' | 'distinct' | 'omit'> & {
-      select?: MovieGenderCountAggregateInputType | true
+  type MovieGenreCountArgs<ExtArgs extends $Extensions.InternalArgs = $Extensions.DefaultArgs> =
+    Omit<MovieGenreFindManyArgs, 'select' | 'include' | 'distinct' | 'omit'> & {
+      select?: MovieGenreCountAggregateInputType | true
     }
 
-  export interface MovieGenderDelegate<ExtArgs extends $Extensions.InternalArgs = $Extensions.DefaultArgs, GlobalOmitOptions = {}> {
-    [K: symbol]: { types: Prisma.TypeMap<ExtArgs>['model']['MovieGender'], meta: { name: 'MovieGender' } }
+  export interface MovieGenreDelegate<ExtArgs extends $Extensions.InternalArgs = $Extensions.DefaultArgs, GlobalOmitOptions = {}> {
+    [K: symbol]: { types: Prisma.TypeMap<ExtArgs>['model']['MovieGenre'], meta: { name: 'MovieGenre' } }
     /**
-     * Find zero or one MovieGender that matches the filter.
-     * @param {MovieGenderFindUniqueArgs} args - Arguments to find a MovieGender
+     * Find zero or one MovieGenre that matches the filter.
+     * @param {MovieGenreFindUniqueArgs} args - Arguments to find a MovieGenre
      * @example
-     * // Get one MovieGender
-     * const movieGender = await prisma.movieGender.findUnique({
+     * // Get one MovieGenre
+     * const movieGenre = await prisma.movieGenre.findUnique({
      *   where: {
      *     // ... provide filter here
      *   }
      * })
      */
-    findUnique<T extends MovieGenderFindUniqueArgs>(args: SelectSubset<T, MovieGenderFindUniqueArgs<ExtArgs>>): Prisma__MovieGenderClient<$Result.GetResult<Prisma.$MovieGenderPayload<ExtArgs>, T, "findUnique", GlobalOmitOptions> | null, null, ExtArgs, GlobalOmitOptions>
+    findUnique<T extends MovieGenreFindUniqueArgs>(args: SelectSubset<T, MovieGenreFindUniqueArgs<ExtArgs>>): Prisma__MovieGenreClient<$Result.GetResult<Prisma.$MovieGenrePayload<ExtArgs>, T, "findUnique", GlobalOmitOptions> | null, null, ExtArgs, GlobalOmitOptions>
 
     /**
-     * Find one MovieGender that matches the filter or throw an error with `error.code='P2025'`
+     * Find one MovieGenre that matches the filter or throw an error with `error.code='P2025'`
      * if no matches were found.
-     * @param {MovieGenderFindUniqueOrThrowArgs} args - Arguments to find a MovieGender
+     * @param {MovieGenreFindUniqueOrThrowArgs} args - Arguments to find a MovieGenre
      * @example
-     * // Get one MovieGender
-     * const movieGender = await prisma.movieGender.findUniqueOrThrow({
+     * // Get one MovieGenre
+     * const movieGenre = await prisma.movieGenre.findUniqueOrThrow({
      *   where: {
      *     // ... provide filter here
      *   }
      * })
      */
-    findUniqueOrThrow<T extends MovieGenderFindUniqueOrThrowArgs>(args: SelectSubset<T, MovieGenderFindUniqueOrThrowArgs<ExtArgs>>): Prisma__MovieGenderClient<$Result.GetResult<Prisma.$MovieGenderPayload<ExtArgs>, T, "findUniqueOrThrow", GlobalOmitOptions>, never, ExtArgs, GlobalOmitOptions>
+    findUniqueOrThrow<T extends MovieGenreFindUniqueOrThrowArgs>(args: SelectSubset<T, MovieGenreFindUniqueOrThrowArgs<ExtArgs>>): Prisma__MovieGenreClient<$Result.GetResult<Prisma.$MovieGenrePayload<ExtArgs>, T, "findUniqueOrThrow", GlobalOmitOptions>, never, ExtArgs, GlobalOmitOptions>
 
     /**
-     * Find the first MovieGender that matches the filter.
+     * Find the first MovieGenre that matches the filter.
      * Note, that providing `undefined` is treated as the value not being there.
      * Read more here: https://pris.ly/d/null-undefined
-     * @param {MovieGenderFindFirstArgs} args - Arguments to find a MovieGender
+     * @param {MovieGenreFindFirstArgs} args - Arguments to find a MovieGenre
      * @example
-     * // Get one MovieGender
-     * const movieGender = await prisma.movieGender.findFirst({
+     * // Get one MovieGenre
+     * const movieGenre = await prisma.movieGenre.findFirst({
      *   where: {
      *     // ... provide filter here
      *   }
      * })
      */
-    findFirst<T extends MovieGenderFindFirstArgs>(args?: SelectSubset<T, MovieGenderFindFirstArgs<ExtArgs>>): Prisma__MovieGenderClient<$Result.GetResult<Prisma.$MovieGenderPayload<ExtArgs>, T, "findFirst", GlobalOmitOptions> | null, null, ExtArgs, GlobalOmitOptions>
+    findFirst<T extends MovieGenreFindFirstArgs>(args?: SelectSubset<T, MovieGenreFindFirstArgs<ExtArgs>>): Prisma__MovieGenreClient<$Result.GetResult<Prisma.$MovieGenrePayload<ExtArgs>, T, "findFirst", GlobalOmitOptions> | null, null, ExtArgs, GlobalOmitOptions>
 
     /**
-     * Find the first MovieGender that matches the filter or
+     * Find the first MovieGenre that matches the filter or
      * throw `PrismaKnownClientError` with `P2025` code if no matches were found.
      * Note, that providing `undefined` is treated as the value not being there.
      * Read more here: https://pris.ly/d/null-undefined
-     * @param {MovieGenderFindFirstOrThrowArgs} args - Arguments to find a MovieGender
+     * @param {MovieGenreFindFirstOrThrowArgs} args - Arguments to find a MovieGenre
      * @example
-     * // Get one MovieGender
-     * const movieGender = await prisma.movieGender.findFirstOrThrow({
+     * // Get one MovieGenre
+     * const movieGenre = await prisma.movieGenre.findFirstOrThrow({
      *   where: {
      *     // ... provide filter here
      *   }
      * })
      */
-    findFirstOrThrow<T extends MovieGenderFindFirstOrThrowArgs>(args?: SelectSubset<T, MovieGenderFindFirstOrThrowArgs<ExtArgs>>): Prisma__MovieGenderClient<$Result.GetResult<Prisma.$MovieGenderPayload<ExtArgs>, T, "findFirstOrThrow", GlobalOmitOptions>, never, ExtArgs, GlobalOmitOptions>
+    findFirstOrThrow<T extends MovieGenreFindFirstOrThrowArgs>(args?: SelectSubset<T, MovieGenreFindFirstOrThrowArgs<ExtArgs>>): Prisma__MovieGenreClient<$Result.GetResult<Prisma.$MovieGenrePayload<ExtArgs>, T, "findFirstOrThrow", GlobalOmitOptions>, never, ExtArgs, GlobalOmitOptions>
 
     /**
-     * Find zero or more MovieGenders that matches the filter.
+     * Find zero or more MovieGenres that matches the filter.
      * Note, that providing `undefined` is treated as the value not being there.
      * Read more here: https://pris.ly/d/null-undefined
-     * @param {MovieGenderFindManyArgs} args - Arguments to filter and select certain fields only.
+     * @param {MovieGenreFindManyArgs} args - Arguments to filter and select certain fields only.
      * @example
-     * // Get all MovieGenders
-     * const movieGenders = await prisma.movieGender.findMany()
+     * // Get all MovieGenres
+     * const movieGenres = await prisma.movieGenre.findMany()
      * 
-     * // Get first 10 MovieGenders
-     * const movieGenders = await prisma.movieGender.findMany({ take: 10 })
+     * // Get first 10 MovieGenres
+     * const movieGenres = await prisma.movieGenre.findMany({ take: 10 })
      * 
      * // Only select the `id`
-     * const movieGenderWithIdOnly = await prisma.movieGender.findMany({ select: { id: true } })
+     * const movieGenreWithIdOnly = await prisma.movieGenre.findMany({ select: { id: true } })
      * 
      */
-    findMany<T extends MovieGenderFindManyArgs>(args?: SelectSubset<T, MovieGenderFindManyArgs<ExtArgs>>): Prisma.PrismaPromise<$Result.GetResult<Prisma.$MovieGenderPayload<ExtArgs>, T, "findMany", GlobalOmitOptions>>
+    findMany<T extends MovieGenreFindManyArgs>(args?: SelectSubset<T, MovieGenreFindManyArgs<ExtArgs>>): Prisma.PrismaPromise<$Result.GetResult<Prisma.$MovieGenrePayload<ExtArgs>, T, "findMany", GlobalOmitOptions>>
 
     /**
-     * Create a MovieGender.
-     * @param {MovieGenderCreateArgs} args - Arguments to create a MovieGender.
+     * Create a MovieGenre.
+     * @param {MovieGenreCreateArgs} args - Arguments to create a MovieGenre.
      * @example
-     * // Create one MovieGender
-     * const MovieGender = await prisma.movieGender.create({
+     * // Create one MovieGenre
+     * const MovieGenre = await prisma.movieGenre.create({
      *   data: {
-     *     // ... data to create a MovieGender
+     *     // ... data to create a MovieGenre
      *   }
      * })
      * 
      */
-    create<T extends MovieGenderCreateArgs>(args: SelectSubset<T, MovieGenderCreateArgs<ExtArgs>>): Prisma__MovieGenderClient<$Result.GetResult<Prisma.$MovieGenderPayload<ExtArgs>, T, "create", GlobalOmitOptions>, never, ExtArgs, GlobalOmitOptions>
+    create<T extends MovieGenreCreateArgs>(args: SelectSubset<T, MovieGenreCreateArgs<ExtArgs>>): Prisma__MovieGenreClient<$Result.GetResult<Prisma.$MovieGenrePayload<ExtArgs>, T, "create", GlobalOmitOptions>, never, ExtArgs, GlobalOmitOptions>
 
     /**
-     * Create many MovieGenders.
-     * @param {MovieGenderCreateManyArgs} args - Arguments to create many MovieGenders.
+     * Create many MovieGenres.
+     * @param {MovieGenreCreateManyArgs} args - Arguments to create many MovieGenres.
      * @example
-     * // Create many MovieGenders
-     * const movieGender = await prisma.movieGender.createMany({
+     * // Create many MovieGenres
+     * const movieGenre = await prisma.movieGenre.createMany({
      *   data: [
      *     // ... provide data here
      *   ]
      * })
      *     
      */
-    createMany<T extends MovieGenderCreateManyArgs>(args?: SelectSubset<T, MovieGenderCreateManyArgs<ExtArgs>>): Prisma.PrismaPromise<BatchPayload>
+    createMany<T extends MovieGenreCreateManyArgs>(args?: SelectSubset<T, MovieGenreCreateManyArgs<ExtArgs>>): Prisma.PrismaPromise<BatchPayload>
 
     /**
-     * Create many MovieGenders and returns the data saved in the database.
-     * @param {MovieGenderCreateManyAndReturnArgs} args - Arguments to create many MovieGenders.
+     * Create many MovieGenres and returns the data saved in the database.
+     * @param {MovieGenreCreateManyAndReturnArgs} args - Arguments to create many MovieGenres.
      * @example
-     * // Create many MovieGenders
-     * const movieGender = await prisma.movieGender.createManyAndReturn({
+     * // Create many MovieGenres
+     * const movieGenre = await prisma.movieGenre.createManyAndReturn({
      *   data: [
      *     // ... provide data here
      *   ]
      * })
      * 
-     * // Create many MovieGenders and only return the `id`
-     * const movieGenderWithIdOnly = await prisma.movieGender.createManyAndReturn({
+     * // Create many MovieGenres and only return the `id`
+     * const movieGenreWithIdOnly = await prisma.movieGenre.createManyAndReturn({
      *   select: { id: true },
      *   data: [
      *     // ... provide data here
@@ -2657,28 +2679,28 @@ export namespace Prisma {
      * Read more here: https://pris.ly/d/null-undefined
      * 
      */
-    createManyAndReturn<T extends MovieGenderCreateManyAndReturnArgs>(args?: SelectSubset<T, MovieGenderCreateManyAndReturnArgs<ExtArgs>>): Prisma.PrismaPromise<$Result.GetResult<Prisma.$MovieGenderPayload<ExtArgs>, T, "createManyAndReturn", GlobalOmitOptions>>
+    createManyAndReturn<T extends MovieGenreCreateManyAndReturnArgs>(args?: SelectSubset<T, MovieGenreCreateManyAndReturnArgs<ExtArgs>>): Prisma.PrismaPromise<$Result.GetResult<Prisma.$MovieGenrePayload<ExtArgs>, T, "createManyAndReturn", GlobalOmitOptions>>
 
     /**
-     * Delete a MovieGender.
-     * @param {MovieGenderDeleteArgs} args - Arguments to delete one MovieGender.
+     * Delete a MovieGenre.
+     * @param {MovieGenreDeleteArgs} args - Arguments to delete one MovieGenre.
      * @example
-     * // Delete one MovieGender
-     * const MovieGender = await prisma.movieGender.delete({
+     * // Delete one MovieGenre
+     * const MovieGenre = await prisma.movieGenre.delete({
      *   where: {
-     *     // ... filter to delete one MovieGender
+     *     // ... filter to delete one MovieGenre
      *   }
      * })
      * 
      */
-    delete<T extends MovieGenderDeleteArgs>(args: SelectSubset<T, MovieGenderDeleteArgs<ExtArgs>>): Prisma__MovieGenderClient<$Result.GetResult<Prisma.$MovieGenderPayload<ExtArgs>, T, "delete", GlobalOmitOptions>, never, ExtArgs, GlobalOmitOptions>
+    delete<T extends MovieGenreDeleteArgs>(args: SelectSubset<T, MovieGenreDeleteArgs<ExtArgs>>): Prisma__MovieGenreClient<$Result.GetResult<Prisma.$MovieGenrePayload<ExtArgs>, T, "delete", GlobalOmitOptions>, never, ExtArgs, GlobalOmitOptions>
 
     /**
-     * Update one MovieGender.
-     * @param {MovieGenderUpdateArgs} args - Arguments to update one MovieGender.
+     * Update one MovieGenre.
+     * @param {MovieGenreUpdateArgs} args - Arguments to update one MovieGenre.
      * @example
-     * // Update one MovieGender
-     * const movieGender = await prisma.movieGender.update({
+     * // Update one MovieGenre
+     * const movieGenre = await prisma.movieGenre.update({
      *   where: {
      *     // ... provide filter here
      *   },
@@ -2688,30 +2710,30 @@ export namespace Prisma {
      * })
      * 
      */
-    update<T extends MovieGenderUpdateArgs>(args: SelectSubset<T, MovieGenderUpdateArgs<ExtArgs>>): Prisma__MovieGenderClient<$Result.GetResult<Prisma.$MovieGenderPayload<ExtArgs>, T, "update", GlobalOmitOptions>, never, ExtArgs, GlobalOmitOptions>
+    update<T extends MovieGenreUpdateArgs>(args: SelectSubset<T, MovieGenreUpdateArgs<ExtArgs>>): Prisma__MovieGenreClient<$Result.GetResult<Prisma.$MovieGenrePayload<ExtArgs>, T, "update", GlobalOmitOptions>, never, ExtArgs, GlobalOmitOptions>
 
     /**
-     * Delete zero or more MovieGenders.
-     * @param {MovieGenderDeleteManyArgs} args - Arguments to filter MovieGenders to delete.
+     * Delete zero or more MovieGenres.
+     * @param {MovieGenreDeleteManyArgs} args - Arguments to filter MovieGenres to delete.
      * @example
-     * // Delete a few MovieGenders
-     * const { count } = await prisma.movieGender.deleteMany({
+     * // Delete a few MovieGenres
+     * const { count } = await prisma.movieGenre.deleteMany({
      *   where: {
      *     // ... provide filter here
      *   }
      * })
      * 
      */
-    deleteMany<T extends MovieGenderDeleteManyArgs>(args?: SelectSubset<T, MovieGenderDeleteManyArgs<ExtArgs>>): Prisma.PrismaPromise<BatchPayload>
+    deleteMany<T extends MovieGenreDeleteManyArgs>(args?: SelectSubset<T, MovieGenreDeleteManyArgs<ExtArgs>>): Prisma.PrismaPromise<BatchPayload>
 
     /**
-     * Update zero or more MovieGenders.
+     * Update zero or more MovieGenres.
      * Note, that providing `undefined` is treated as the value not being there.
      * Read more here: https://pris.ly/d/null-undefined
-     * @param {MovieGenderUpdateManyArgs} args - Arguments to update one or more rows.
+     * @param {MovieGenreUpdateManyArgs} args - Arguments to update one or more rows.
      * @example
-     * // Update many MovieGenders
-     * const movieGender = await prisma.movieGender.updateMany({
+     * // Update many MovieGenres
+     * const movieGenre = await prisma.movieGenre.updateMany({
      *   where: {
      *     // ... provide filter here
      *   },
@@ -2721,14 +2743,14 @@ export namespace Prisma {
      * })
      * 
      */
-    updateMany<T extends MovieGenderUpdateManyArgs>(args: SelectSubset<T, MovieGenderUpdateManyArgs<ExtArgs>>): Prisma.PrismaPromise<BatchPayload>
+    updateMany<T extends MovieGenreUpdateManyArgs>(args: SelectSubset<T, MovieGenreUpdateManyArgs<ExtArgs>>): Prisma.PrismaPromise<BatchPayload>
 
     /**
-     * Update zero or more MovieGenders and returns the data updated in the database.
-     * @param {MovieGenderUpdateManyAndReturnArgs} args - Arguments to update many MovieGenders.
+     * Update zero or more MovieGenres and returns the data updated in the database.
+     * @param {MovieGenreUpdateManyAndReturnArgs} args - Arguments to update many MovieGenres.
      * @example
-     * // Update many MovieGenders
-     * const movieGender = await prisma.movieGender.updateManyAndReturn({
+     * // Update many MovieGenres
+     * const movieGenre = await prisma.movieGenre.updateManyAndReturn({
      *   where: {
      *     // ... provide filter here
      *   },
@@ -2737,8 +2759,8 @@ export namespace Prisma {
      *   ]
      * })
      * 
-     * // Update zero or more MovieGenders and only return the `id`
-     * const movieGenderWithIdOnly = await prisma.movieGender.updateManyAndReturn({
+     * // Update zero or more MovieGenres and only return the `id`
+     * const movieGenreWithIdOnly = await prisma.movieGenre.updateManyAndReturn({
      *   select: { id: true },
      *   where: {
      *     // ... provide filter here
@@ -2751,56 +2773,56 @@ export namespace Prisma {
      * Read more here: https://pris.ly/d/null-undefined
      * 
      */
-    updateManyAndReturn<T extends MovieGenderUpdateManyAndReturnArgs>(args: SelectSubset<T, MovieGenderUpdateManyAndReturnArgs<ExtArgs>>): Prisma.PrismaPromise<$Result.GetResult<Prisma.$MovieGenderPayload<ExtArgs>, T, "updateManyAndReturn", GlobalOmitOptions>>
+    updateManyAndReturn<T extends MovieGenreUpdateManyAndReturnArgs>(args: SelectSubset<T, MovieGenreUpdateManyAndReturnArgs<ExtArgs>>): Prisma.PrismaPromise<$Result.GetResult<Prisma.$MovieGenrePayload<ExtArgs>, T, "updateManyAndReturn", GlobalOmitOptions>>
 
     /**
-     * Create or update one MovieGender.
-     * @param {MovieGenderUpsertArgs} args - Arguments to update or create a MovieGender.
+     * Create or update one MovieGenre.
+     * @param {MovieGenreUpsertArgs} args - Arguments to update or create a MovieGenre.
      * @example
-     * // Update or create a MovieGender
-     * const movieGender = await prisma.movieGender.upsert({
+     * // Update or create a MovieGenre
+     * const movieGenre = await prisma.movieGenre.upsert({
      *   create: {
-     *     // ... data to create a MovieGender
+     *     // ... data to create a MovieGenre
      *   },
      *   update: {
      *     // ... in case it already exists, update
      *   },
      *   where: {
-     *     // ... the filter for the MovieGender we want to update
+     *     // ... the filter for the MovieGenre we want to update
      *   }
      * })
      */
-    upsert<T extends MovieGenderUpsertArgs>(args: SelectSubset<T, MovieGenderUpsertArgs<ExtArgs>>): Prisma__MovieGenderClient<$Result.GetResult<Prisma.$MovieGenderPayload<ExtArgs>, T, "upsert", GlobalOmitOptions>, never, ExtArgs, GlobalOmitOptions>
+    upsert<T extends MovieGenreUpsertArgs>(args: SelectSubset<T, MovieGenreUpsertArgs<ExtArgs>>): Prisma__MovieGenreClient<$Result.GetResult<Prisma.$MovieGenrePayload<ExtArgs>, T, "upsert", GlobalOmitOptions>, never, ExtArgs, GlobalOmitOptions>
 
 
     /**
-     * Count the number of MovieGenders.
+     * Count the number of MovieGenres.
      * Note, that providing `undefined` is treated as the value not being there.
      * Read more here: https://pris.ly/d/null-undefined
-     * @param {MovieGenderCountArgs} args - Arguments to filter MovieGenders to count.
+     * @param {MovieGenreCountArgs} args - Arguments to filter MovieGenres to count.
      * @example
-     * // Count the number of MovieGenders
-     * const count = await prisma.movieGender.count({
+     * // Count the number of MovieGenres
+     * const count = await prisma.movieGenre.count({
      *   where: {
-     *     // ... the filter for the MovieGenders we want to count
+     *     // ... the filter for the MovieGenres we want to count
      *   }
      * })
     **/
-    count<T extends MovieGenderCountArgs>(
-      args?: Subset<T, MovieGenderCountArgs>,
+    count<T extends MovieGenreCountArgs>(
+      args?: Subset<T, MovieGenreCountArgs>,
     ): Prisma.PrismaPromise<
       T extends $Utils.Record<'select', any>
         ? T['select'] extends true
           ? number
-          : GetScalarType<T['select'], MovieGenderCountAggregateOutputType>
+          : GetScalarType<T['select'], MovieGenreCountAggregateOutputType>
         : number
     >
 
     /**
-     * Allows you to perform aggregations operations on a MovieGender.
+     * Allows you to perform aggregations operations on a MovieGenre.
      * Note, that providing `undefined` is treated as the value not being there.
      * Read more here: https://pris.ly/d/null-undefined
-     * @param {MovieGenderAggregateArgs} args - Select which aggregations you would like to apply and on what fields.
+     * @param {MovieGenreAggregateArgs} args - Select which aggregations you would like to apply and on what fields.
      * @example
      * // Ordered by age ascending
      * // Where email contains prisma.io
@@ -2820,13 +2842,13 @@ export namespace Prisma {
      *   take: 10,
      * })
     **/
-    aggregate<T extends MovieGenderAggregateArgs>(args: Subset<T, MovieGenderAggregateArgs>): Prisma.PrismaPromise<GetMovieGenderAggregateType<T>>
+    aggregate<T extends MovieGenreAggregateArgs>(args: Subset<T, MovieGenreAggregateArgs>): Prisma.PrismaPromise<GetMovieGenreAggregateType<T>>
 
     /**
-     * Group by MovieGender.
+     * Group by MovieGenre.
      * Note, that providing `undefined` is treated as the value not being there.
      * Read more here: https://pris.ly/d/null-undefined
-     * @param {MovieGenderGroupByArgs} args - Group by arguments.
+     * @param {MovieGenreGroupByArgs} args - Group by arguments.
      * @example
      * // Group by city, order by createdAt, get count
      * const result = await prisma.user.groupBy({
@@ -2841,14 +2863,14 @@ export namespace Prisma {
      * 
     **/
     groupBy<
-      T extends MovieGenderGroupByArgs,
+      T extends MovieGenreGroupByArgs,
       HasSelectOrTake extends Or<
         Extends<'skip', Keys<T>>,
         Extends<'take', Keys<T>>
       >,
       OrderByArg extends True extends HasSelectOrTake
-        ? { orderBy: MovieGenderGroupByArgs['orderBy'] }
-        : { orderBy?: MovieGenderGroupByArgs['orderBy'] },
+        ? { orderBy: MovieGenreGroupByArgs['orderBy'] }
+        : { orderBy?: MovieGenreGroupByArgs['orderBy'] },
       OrderFields extends ExcludeUnderscoreKeys<Keys<MaybeTupleToUnion<T['orderBy']>>>,
       ByFields extends MaybeTupleToUnion<T['by']>,
       ByValid extends Has<ByFields, OrderFields>,
@@ -2897,22 +2919,22 @@ export namespace Prisma {
             ? never
             : `Error: Field "${P}" in "orderBy" needs to be provided in "by"`
         }[OrderFields]
-    >(args: SubsetIntersection<T, MovieGenderGroupByArgs, OrderByArg> & InputErrors): {} extends InputErrors ? GetMovieGenderGroupByPayload<T> : Prisma.PrismaPromise<InputErrors>
+    >(args: SubsetIntersection<T, MovieGenreGroupByArgs, OrderByArg> & InputErrors): {} extends InputErrors ? GetMovieGenreGroupByPayload<T> : Prisma.PrismaPromise<InputErrors>
   /**
-   * Fields of the MovieGender model
+   * Fields of the MovieGenre model
    */
-  readonly fields: MovieGenderFieldRefs;
+  readonly fields: MovieGenreFieldRefs;
   }
 
   /**
-   * The delegate class that acts as a "Promise-like" for MovieGender.
+   * The delegate class that acts as a "Promise-like" for MovieGenre.
    * Why is this prefixed with `Prisma__`?
    * Because we want to prevent naming conflicts as mentioned in
    * https://github.com/prisma/prisma-client-js/issues/707
    */
-  export interface Prisma__MovieGenderClient<T, Null = never, ExtArgs extends $Extensions.InternalArgs = $Extensions.DefaultArgs, GlobalOmitOptions = {}> extends Prisma.PrismaPromise<T> {
+  export interface Prisma__MovieGenreClient<T, Null = never, ExtArgs extends $Extensions.InternalArgs = $Extensions.DefaultArgs, GlobalOmitOptions = {}> extends Prisma.PrismaPromise<T> {
     readonly [Symbol.toStringTag]: "PrismaPromise"
-    movies<T extends MovieGender$moviesArgs<ExtArgs> = {}>(args?: Subset<T, MovieGender$moviesArgs<ExtArgs>>): Prisma.PrismaPromise<$Result.GetResult<Prisma.$MoviePayload<ExtArgs>, T, "findMany", GlobalOmitOptions> | Null>
+    movies<T extends MovieGenre$moviesArgs<ExtArgs> = {}>(args?: Subset<T, MovieGenre$moviesArgs<ExtArgs>>): Prisma.PrismaPromise<$Result.GetResult<Prisma.$MoviePayload<ExtArgs>, T, "findMany", GlobalOmitOptions> | Null>
     /**
      * Attaches callbacks for the resolution and/or rejection of the Promise.
      * @param onfulfilled The callback to execute when the Promise is resolved.
@@ -2939,403 +2961,402 @@ export namespace Prisma {
 
 
   /**
-   * Fields of the MovieGender model
+   * Fields of the MovieGenre model
    */
-  interface MovieGenderFieldRefs {
-    readonly id: FieldRef<"MovieGender", 'String'>
-    readonly name: FieldRef<"MovieGender", 'String'>
-    readonly description: FieldRef<"MovieGender", 'String'>
+  interface MovieGenreFieldRefs {
+    readonly id: FieldRef<"MovieGenre", 'Int'>
+    readonly name: FieldRef<"MovieGenre", 'String'>
   }
     
 
   // Custom InputTypes
   /**
-   * MovieGender findUnique
+   * MovieGenre findUnique
    */
-  export type MovieGenderFindUniqueArgs<ExtArgs extends $Extensions.InternalArgs = $Extensions.DefaultArgs> = {
+  export type MovieGenreFindUniqueArgs<ExtArgs extends $Extensions.InternalArgs = $Extensions.DefaultArgs> = {
     /**
-     * Select specific fields to fetch from the MovieGender
+     * Select specific fields to fetch from the MovieGenre
      */
-    select?: MovieGenderSelect<ExtArgs> | null
+    select?: MovieGenreSelect<ExtArgs> | null
     /**
-     * Omit specific fields from the MovieGender
+     * Omit specific fields from the MovieGenre
      */
-    omit?: MovieGenderOmit<ExtArgs> | null
+    omit?: MovieGenreOmit<ExtArgs> | null
     /**
      * Choose, which related nodes to fetch as well
      */
-    include?: MovieGenderInclude<ExtArgs> | null
+    include?: MovieGenreInclude<ExtArgs> | null
     /**
-     * Filter, which MovieGender to fetch.
+     * Filter, which MovieGenre to fetch.
      */
-    where: MovieGenderWhereUniqueInput
+    where: MovieGenreWhereUniqueInput
   }
 
   /**
-   * MovieGender findUniqueOrThrow
+   * MovieGenre findUniqueOrThrow
    */
-  export type MovieGenderFindUniqueOrThrowArgs<ExtArgs extends $Extensions.InternalArgs = $Extensions.DefaultArgs> = {
+  export type MovieGenreFindUniqueOrThrowArgs<ExtArgs extends $Extensions.InternalArgs = $Extensions.DefaultArgs> = {
     /**
-     * Select specific fields to fetch from the MovieGender
+     * Select specific fields to fetch from the MovieGenre
      */
-    select?: MovieGenderSelect<ExtArgs> | null
+    select?: MovieGenreSelect<ExtArgs> | null
     /**
-     * Omit specific fields from the MovieGender
+     * Omit specific fields from the MovieGenre
      */
-    omit?: MovieGenderOmit<ExtArgs> | null
+    omit?: MovieGenreOmit<ExtArgs> | null
     /**
      * Choose, which related nodes to fetch as well
      */
-    include?: MovieGenderInclude<ExtArgs> | null
+    include?: MovieGenreInclude<ExtArgs> | null
     /**
-     * Filter, which MovieGender to fetch.
+     * Filter, which MovieGenre to fetch.
      */
-    where: MovieGenderWhereUniqueInput
+    where: MovieGenreWhereUniqueInput
   }
 
   /**
-   * MovieGender findFirst
+   * MovieGenre findFirst
    */
-  export type MovieGenderFindFirstArgs<ExtArgs extends $Extensions.InternalArgs = $Extensions.DefaultArgs> = {
+  export type MovieGenreFindFirstArgs<ExtArgs extends $Extensions.InternalArgs = $Extensions.DefaultArgs> = {
     /**
-     * Select specific fields to fetch from the MovieGender
+     * Select specific fields to fetch from the MovieGenre
      */
-    select?: MovieGenderSelect<ExtArgs> | null
+    select?: MovieGenreSelect<ExtArgs> | null
     /**
-     * Omit specific fields from the MovieGender
+     * Omit specific fields from the MovieGenre
      */
-    omit?: MovieGenderOmit<ExtArgs> | null
+    omit?: MovieGenreOmit<ExtArgs> | null
     /**
      * Choose, which related nodes to fetch as well
      */
-    include?: MovieGenderInclude<ExtArgs> | null
+    include?: MovieGenreInclude<ExtArgs> | null
     /**
-     * Filter, which MovieGender to fetch.
+     * Filter, which MovieGenre to fetch.
      */
-    where?: MovieGenderWhereInput
+    where?: MovieGenreWhereInput
     /**
      * {@link https://www.prisma.io/docs/concepts/components/prisma-client/sorting Sorting Docs}
      * 
-     * Determine the order of MovieGenders to fetch.
+     * Determine the order of MovieGenres to fetch.
      */
-    orderBy?: MovieGenderOrderByWithRelationInput | MovieGenderOrderByWithRelationInput[]
+    orderBy?: MovieGenreOrderByWithRelationInput | MovieGenreOrderByWithRelationInput[]
     /**
      * {@link https://www.prisma.io/docs/concepts/components/prisma-client/pagination#cursor-based-pagination Cursor Docs}
      * 
-     * Sets the position for searching for MovieGenders.
+     * Sets the position for searching for MovieGenres.
      */
-    cursor?: MovieGenderWhereUniqueInput
+    cursor?: MovieGenreWhereUniqueInput
     /**
      * {@link https://www.prisma.io/docs/concepts/components/prisma-client/pagination Pagination Docs}
      * 
-     * Take `±n` MovieGenders from the position of the cursor.
+     * Take `±n` MovieGenres from the position of the cursor.
      */
     take?: number
     /**
      * {@link https://www.prisma.io/docs/concepts/components/prisma-client/pagination Pagination Docs}
      * 
-     * Skip the first `n` MovieGenders.
+     * Skip the first `n` MovieGenres.
      */
     skip?: number
     /**
      * {@link https://www.prisma.io/docs/concepts/components/prisma-client/distinct Distinct Docs}
      * 
-     * Filter by unique combinations of MovieGenders.
+     * Filter by unique combinations of MovieGenres.
      */
-    distinct?: MovieGenderScalarFieldEnum | MovieGenderScalarFieldEnum[]
+    distinct?: MovieGenreScalarFieldEnum | MovieGenreScalarFieldEnum[]
   }
 
   /**
-   * MovieGender findFirstOrThrow
+   * MovieGenre findFirstOrThrow
    */
-  export type MovieGenderFindFirstOrThrowArgs<ExtArgs extends $Extensions.InternalArgs = $Extensions.DefaultArgs> = {
+  export type MovieGenreFindFirstOrThrowArgs<ExtArgs extends $Extensions.InternalArgs = $Extensions.DefaultArgs> = {
     /**
-     * Select specific fields to fetch from the MovieGender
+     * Select specific fields to fetch from the MovieGenre
      */
-    select?: MovieGenderSelect<ExtArgs> | null
+    select?: MovieGenreSelect<ExtArgs> | null
     /**
-     * Omit specific fields from the MovieGender
+     * Omit specific fields from the MovieGenre
      */
-    omit?: MovieGenderOmit<ExtArgs> | null
+    omit?: MovieGenreOmit<ExtArgs> | null
     /**
      * Choose, which related nodes to fetch as well
      */
-    include?: MovieGenderInclude<ExtArgs> | null
+    include?: MovieGenreInclude<ExtArgs> | null
     /**
-     * Filter, which MovieGender to fetch.
+     * Filter, which MovieGenre to fetch.
      */
-    where?: MovieGenderWhereInput
+    where?: MovieGenreWhereInput
     /**
      * {@link https://www.prisma.io/docs/concepts/components/prisma-client/sorting Sorting Docs}
      * 
-     * Determine the order of MovieGenders to fetch.
+     * Determine the order of MovieGenres to fetch.
      */
-    orderBy?: MovieGenderOrderByWithRelationInput | MovieGenderOrderByWithRelationInput[]
+    orderBy?: MovieGenreOrderByWithRelationInput | MovieGenreOrderByWithRelationInput[]
     /**
      * {@link https://www.prisma.io/docs/concepts/components/prisma-client/pagination#cursor-based-pagination Cursor Docs}
      * 
-     * Sets the position for searching for MovieGenders.
+     * Sets the position for searching for MovieGenres.
      */
-    cursor?: MovieGenderWhereUniqueInput
+    cursor?: MovieGenreWhereUniqueInput
     /**
      * {@link https://www.prisma.io/docs/concepts/components/prisma-client/pagination Pagination Docs}
      * 
-     * Take `±n` MovieGenders from the position of the cursor.
+     * Take `±n` MovieGenres from the position of the cursor.
      */
     take?: number
     /**
      * {@link https://www.prisma.io/docs/concepts/components/prisma-client/pagination Pagination Docs}
      * 
-     * Skip the first `n` MovieGenders.
+     * Skip the first `n` MovieGenres.
      */
     skip?: number
     /**
      * {@link https://www.prisma.io/docs/concepts/components/prisma-client/distinct Distinct Docs}
      * 
-     * Filter by unique combinations of MovieGenders.
+     * Filter by unique combinations of MovieGenres.
      */
-    distinct?: MovieGenderScalarFieldEnum | MovieGenderScalarFieldEnum[]
+    distinct?: MovieGenreScalarFieldEnum | MovieGenreScalarFieldEnum[]
   }
 
   /**
-   * MovieGender findMany
+   * MovieGenre findMany
    */
-  export type MovieGenderFindManyArgs<ExtArgs extends $Extensions.InternalArgs = $Extensions.DefaultArgs> = {
+  export type MovieGenreFindManyArgs<ExtArgs extends $Extensions.InternalArgs = $Extensions.DefaultArgs> = {
     /**
-     * Select specific fields to fetch from the MovieGender
+     * Select specific fields to fetch from the MovieGenre
      */
-    select?: MovieGenderSelect<ExtArgs> | null
+    select?: MovieGenreSelect<ExtArgs> | null
     /**
-     * Omit specific fields from the MovieGender
+     * Omit specific fields from the MovieGenre
      */
-    omit?: MovieGenderOmit<ExtArgs> | null
+    omit?: MovieGenreOmit<ExtArgs> | null
     /**
      * Choose, which related nodes to fetch as well
      */
-    include?: MovieGenderInclude<ExtArgs> | null
+    include?: MovieGenreInclude<ExtArgs> | null
     /**
-     * Filter, which MovieGenders to fetch.
+     * Filter, which MovieGenres to fetch.
      */
-    where?: MovieGenderWhereInput
+    where?: MovieGenreWhereInput
     /**
      * {@link https://www.prisma.io/docs/concepts/components/prisma-client/sorting Sorting Docs}
      * 
-     * Determine the order of MovieGenders to fetch.
+     * Determine the order of MovieGenres to fetch.
      */
-    orderBy?: MovieGenderOrderByWithRelationInput | MovieGenderOrderByWithRelationInput[]
+    orderBy?: MovieGenreOrderByWithRelationInput | MovieGenreOrderByWithRelationInput[]
     /**
      * {@link https://www.prisma.io/docs/concepts/components/prisma-client/pagination#cursor-based-pagination Cursor Docs}
      * 
-     * Sets the position for listing MovieGenders.
+     * Sets the position for listing MovieGenres.
      */
-    cursor?: MovieGenderWhereUniqueInput
+    cursor?: MovieGenreWhereUniqueInput
     /**
      * {@link https://www.prisma.io/docs/concepts/components/prisma-client/pagination Pagination Docs}
      * 
-     * Take `±n` MovieGenders from the position of the cursor.
+     * Take `±n` MovieGenres from the position of the cursor.
      */
     take?: number
     /**
      * {@link https://www.prisma.io/docs/concepts/components/prisma-client/pagination Pagination Docs}
      * 
-     * Skip the first `n` MovieGenders.
+     * Skip the first `n` MovieGenres.
      */
     skip?: number
-    distinct?: MovieGenderScalarFieldEnum | MovieGenderScalarFieldEnum[]
+    distinct?: MovieGenreScalarFieldEnum | MovieGenreScalarFieldEnum[]
   }
 
   /**
-   * MovieGender create
+   * MovieGenre create
    */
-  export type MovieGenderCreateArgs<ExtArgs extends $Extensions.InternalArgs = $Extensions.DefaultArgs> = {
+  export type MovieGenreCreateArgs<ExtArgs extends $Extensions.InternalArgs = $Extensions.DefaultArgs> = {
     /**
-     * Select specific fields to fetch from the MovieGender
+     * Select specific fields to fetch from the MovieGenre
      */
-    select?: MovieGenderSelect<ExtArgs> | null
+    select?: MovieGenreSelect<ExtArgs> | null
     /**
-     * Omit specific fields from the MovieGender
+     * Omit specific fields from the MovieGenre
      */
-    omit?: MovieGenderOmit<ExtArgs> | null
+    omit?: MovieGenreOmit<ExtArgs> | null
     /**
      * Choose, which related nodes to fetch as well
      */
-    include?: MovieGenderInclude<ExtArgs> | null
+    include?: MovieGenreInclude<ExtArgs> | null
     /**
-     * The data needed to create a MovieGender.
+     * The data needed to create a MovieGenre.
      */
-    data: XOR<MovieGenderCreateInput, MovieGenderUncheckedCreateInput>
+    data: XOR<MovieGenreCreateInput, MovieGenreUncheckedCreateInput>
   }
 
   /**
-   * MovieGender createMany
+   * MovieGenre createMany
    */
-  export type MovieGenderCreateManyArgs<ExtArgs extends $Extensions.InternalArgs = $Extensions.DefaultArgs> = {
+  export type MovieGenreCreateManyArgs<ExtArgs extends $Extensions.InternalArgs = $Extensions.DefaultArgs> = {
     /**
-     * The data used to create many MovieGenders.
+     * The data used to create many MovieGenres.
      */
-    data: MovieGenderCreateManyInput | MovieGenderCreateManyInput[]
+    data: MovieGenreCreateManyInput | MovieGenreCreateManyInput[]
     skipDuplicates?: boolean
   }
 
   /**
-   * MovieGender createManyAndReturn
+   * MovieGenre createManyAndReturn
    */
-  export type MovieGenderCreateManyAndReturnArgs<ExtArgs extends $Extensions.InternalArgs = $Extensions.DefaultArgs> = {
+  export type MovieGenreCreateManyAndReturnArgs<ExtArgs extends $Extensions.InternalArgs = $Extensions.DefaultArgs> = {
     /**
-     * Select specific fields to fetch from the MovieGender
+     * Select specific fields to fetch from the MovieGenre
      */
-    select?: MovieGenderSelectCreateManyAndReturn<ExtArgs> | null
+    select?: MovieGenreSelectCreateManyAndReturn<ExtArgs> | null
     /**
-     * Omit specific fields from the MovieGender
+     * Omit specific fields from the MovieGenre
      */
-    omit?: MovieGenderOmit<ExtArgs> | null
+    omit?: MovieGenreOmit<ExtArgs> | null
     /**
-     * The data used to create many MovieGenders.
+     * The data used to create many MovieGenres.
      */
-    data: MovieGenderCreateManyInput | MovieGenderCreateManyInput[]
+    data: MovieGenreCreateManyInput | MovieGenreCreateManyInput[]
     skipDuplicates?: boolean
   }
 
   /**
-   * MovieGender update
+   * MovieGenre update
    */
-  export type MovieGenderUpdateArgs<ExtArgs extends $Extensions.InternalArgs = $Extensions.DefaultArgs> = {
+  export type MovieGenreUpdateArgs<ExtArgs extends $Extensions.InternalArgs = $Extensions.DefaultArgs> = {
     /**
-     * Select specific fields to fetch from the MovieGender
+     * Select specific fields to fetch from the MovieGenre
      */
-    select?: MovieGenderSelect<ExtArgs> | null
+    select?: MovieGenreSelect<ExtArgs> | null
     /**
-     * Omit specific fields from the MovieGender
+     * Omit specific fields from the MovieGenre
      */
-    omit?: MovieGenderOmit<ExtArgs> | null
+    omit?: MovieGenreOmit<ExtArgs> | null
     /**
      * Choose, which related nodes to fetch as well
      */
-    include?: MovieGenderInclude<ExtArgs> | null
+    include?: MovieGenreInclude<ExtArgs> | null
     /**
-     * The data needed to update a MovieGender.
+     * The data needed to update a MovieGenre.
      */
-    data: XOR<MovieGenderUpdateInput, MovieGenderUncheckedUpdateInput>
+    data: XOR<MovieGenreUpdateInput, MovieGenreUncheckedUpdateInput>
     /**
-     * Choose, which MovieGender to update.
+     * Choose, which MovieGenre to update.
      */
-    where: MovieGenderWhereUniqueInput
+    where: MovieGenreWhereUniqueInput
   }
 
   /**
-   * MovieGender updateMany
+   * MovieGenre updateMany
    */
-  export type MovieGenderUpdateManyArgs<ExtArgs extends $Extensions.InternalArgs = $Extensions.DefaultArgs> = {
+  export type MovieGenreUpdateManyArgs<ExtArgs extends $Extensions.InternalArgs = $Extensions.DefaultArgs> = {
     /**
-     * The data used to update MovieGenders.
+     * The data used to update MovieGenres.
      */
-    data: XOR<MovieGenderUpdateManyMutationInput, MovieGenderUncheckedUpdateManyInput>
+    data: XOR<MovieGenreUpdateManyMutationInput, MovieGenreUncheckedUpdateManyInput>
     /**
-     * Filter which MovieGenders to update
+     * Filter which MovieGenres to update
      */
-    where?: MovieGenderWhereInput
+    where?: MovieGenreWhereInput
     /**
-     * Limit how many MovieGenders to update.
+     * Limit how many MovieGenres to update.
      */
     limit?: number
   }
 
   /**
-   * MovieGender updateManyAndReturn
+   * MovieGenre updateManyAndReturn
    */
-  export type MovieGenderUpdateManyAndReturnArgs<ExtArgs extends $Extensions.InternalArgs = $Extensions.DefaultArgs> = {
+  export type MovieGenreUpdateManyAndReturnArgs<ExtArgs extends $Extensions.InternalArgs = $Extensions.DefaultArgs> = {
     /**
-     * Select specific fields to fetch from the MovieGender
+     * Select specific fields to fetch from the MovieGenre
      */
-    select?: MovieGenderSelectUpdateManyAndReturn<ExtArgs> | null
+    select?: MovieGenreSelectUpdateManyAndReturn<ExtArgs> | null
     /**
-     * Omit specific fields from the MovieGender
+     * Omit specific fields from the MovieGenre
      */
-    omit?: MovieGenderOmit<ExtArgs> | null
+    omit?: MovieGenreOmit<ExtArgs> | null
     /**
-     * The data used to update MovieGenders.
+     * The data used to update MovieGenres.
      */
-    data: XOR<MovieGenderUpdateManyMutationInput, MovieGenderUncheckedUpdateManyInput>
+    data: XOR<MovieGenreUpdateManyMutationInput, MovieGenreUncheckedUpdateManyInput>
     /**
-     * Filter which MovieGenders to update
+     * Filter which MovieGenres to update
      */
-    where?: MovieGenderWhereInput
+    where?: MovieGenreWhereInput
     /**
-     * Limit how many MovieGenders to update.
+     * Limit how many MovieGenres to update.
      */
     limit?: number
   }
 
   /**
-   * MovieGender upsert
+   * MovieGenre upsert
    */
-  export type MovieGenderUpsertArgs<ExtArgs extends $Extensions.InternalArgs = $Extensions.DefaultArgs> = {
+  export type MovieGenreUpsertArgs<ExtArgs extends $Extensions.InternalArgs = $Extensions.DefaultArgs> = {
     /**
-     * Select specific fields to fetch from the MovieGender
+     * Select specific fields to fetch from the MovieGenre
      */
-    select?: MovieGenderSelect<ExtArgs> | null
+    select?: MovieGenreSelect<ExtArgs> | null
     /**
-     * Omit specific fields from the MovieGender
+     * Omit specific fields from the MovieGenre
      */
-    omit?: MovieGenderOmit<ExtArgs> | null
+    omit?: MovieGenreOmit<ExtArgs> | null
     /**
      * Choose, which related nodes to fetch as well
      */
-    include?: MovieGenderInclude<ExtArgs> | null
+    include?: MovieGenreInclude<ExtArgs> | null
     /**
-     * The filter to search for the MovieGender to update in case it exists.
+     * The filter to search for the MovieGenre to update in case it exists.
      */
-    where: MovieGenderWhereUniqueInput
+    where: MovieGenreWhereUniqueInput
     /**
-     * In case the MovieGender found by the `where` argument doesn't exist, create a new MovieGender with this data.
+     * In case the MovieGenre found by the `where` argument doesn't exist, create a new MovieGenre with this data.
      */
-    create: XOR<MovieGenderCreateInput, MovieGenderUncheckedCreateInput>
+    create: XOR<MovieGenreCreateInput, MovieGenreUncheckedCreateInput>
     /**
-     * In case the MovieGender was found with the provided `where` argument, update it with this data.
+     * In case the MovieGenre was found with the provided `where` argument, update it with this data.
      */
-    update: XOR<MovieGenderUpdateInput, MovieGenderUncheckedUpdateInput>
+    update: XOR<MovieGenreUpdateInput, MovieGenreUncheckedUpdateInput>
   }
 
   /**
-   * MovieGender delete
+   * MovieGenre delete
    */
-  export type MovieGenderDeleteArgs<ExtArgs extends $Extensions.InternalArgs = $Extensions.DefaultArgs> = {
+  export type MovieGenreDeleteArgs<ExtArgs extends $Extensions.InternalArgs = $Extensions.DefaultArgs> = {
     /**
-     * Select specific fields to fetch from the MovieGender
+     * Select specific fields to fetch from the MovieGenre
      */
-    select?: MovieGenderSelect<ExtArgs> | null
+    select?: MovieGenreSelect<ExtArgs> | null
     /**
-     * Omit specific fields from the MovieGender
+     * Omit specific fields from the MovieGenre
      */
-    omit?: MovieGenderOmit<ExtArgs> | null
+    omit?: MovieGenreOmit<ExtArgs> | null
     /**
      * Choose, which related nodes to fetch as well
      */
-    include?: MovieGenderInclude<ExtArgs> | null
+    include?: MovieGenreInclude<ExtArgs> | null
     /**
-     * Filter which MovieGender to delete.
+     * Filter which MovieGenre to delete.
      */
-    where: MovieGenderWhereUniqueInput
+    where: MovieGenreWhereUniqueInput
   }
 
   /**
-   * MovieGender deleteMany
+   * MovieGenre deleteMany
    */
-  export type MovieGenderDeleteManyArgs<ExtArgs extends $Extensions.InternalArgs = $Extensions.DefaultArgs> = {
+  export type MovieGenreDeleteManyArgs<ExtArgs extends $Extensions.InternalArgs = $Extensions.DefaultArgs> = {
     /**
-     * Filter which MovieGenders to delete
+     * Filter which MovieGenres to delete
      */
-    where?: MovieGenderWhereInput
+    where?: MovieGenreWhereInput
     /**
-     * Limit how many MovieGenders to delete.
+     * Limit how many MovieGenres to delete.
      */
     limit?: number
   }
 
   /**
-   * MovieGender.movies
+   * MovieGenre.movies
    */
-  export type MovieGender$moviesArgs<ExtArgs extends $Extensions.InternalArgs = $Extensions.DefaultArgs> = {
+  export type MovieGenre$moviesArgs<ExtArgs extends $Extensions.InternalArgs = $Extensions.DefaultArgs> = {
     /**
      * Select specific fields to fetch from the Movie
      */
@@ -3357,21 +3378,21 @@ export namespace Prisma {
   }
 
   /**
-   * MovieGender without action
+   * MovieGenre without action
    */
-  export type MovieGenderDefaultArgs<ExtArgs extends $Extensions.InternalArgs = $Extensions.DefaultArgs> = {
+  export type MovieGenreDefaultArgs<ExtArgs extends $Extensions.InternalArgs = $Extensions.DefaultArgs> = {
     /**
-     * Select specific fields to fetch from the MovieGender
+     * Select specific fields to fetch from the MovieGenre
      */
-    select?: MovieGenderSelect<ExtArgs> | null
+    select?: MovieGenreSelect<ExtArgs> | null
     /**
-     * Omit specific fields from the MovieGender
+     * Omit specific fields from the MovieGenre
      */
-    omit?: MovieGenderOmit<ExtArgs> | null
+    omit?: MovieGenreOmit<ExtArgs> | null
     /**
      * Choose, which related nodes to fetch as well
      */
-    include?: MovieGenderInclude<ExtArgs> | null
+    include?: MovieGenreInclude<ExtArgs> | null
   }
 
 
@@ -3388,63 +3409,91 @@ export namespace Prisma {
   }
 
   export type MovieAvgAggregateOutputType = {
+    tmdbId: number | null
     ageRestriction: number | null
   }
 
   export type MovieSumAggregateOutputType = {
+    tmdbId: number | null
     ageRestriction: number | null
   }
 
   export type MovieMinAggregateOutputType = {
     id: string | null
+    tmdbId: number | null
     name: string | null
-    ageRestriction: number | null
     sinopsis: string | null
+    releaseDate: Date | null
+    posterUrl: string | null
+    ageRestriction: number | null
+    createdAt: Date | null
   }
 
   export type MovieMaxAggregateOutputType = {
     id: string | null
+    tmdbId: number | null
     name: string | null
-    ageRestriction: number | null
     sinopsis: string | null
+    releaseDate: Date | null
+    posterUrl: string | null
+    ageRestriction: number | null
+    createdAt: Date | null
   }
 
   export type MovieCountAggregateOutputType = {
     id: number
+    tmdbId: number
     name: number
-    ageRestriction: number
     sinopsis: number
+    releaseDate: number
+    posterUrl: number
+    ageRestriction: number
+    createdAt: number
     _all: number
   }
 
 
   export type MovieAvgAggregateInputType = {
+    tmdbId?: true
     ageRestriction?: true
   }
 
   export type MovieSumAggregateInputType = {
+    tmdbId?: true
     ageRestriction?: true
   }
 
   export type MovieMinAggregateInputType = {
     id?: true
+    tmdbId?: true
     name?: true
-    ageRestriction?: true
     sinopsis?: true
+    releaseDate?: true
+    posterUrl?: true
+    ageRestriction?: true
+    createdAt?: true
   }
 
   export type MovieMaxAggregateInputType = {
     id?: true
+    tmdbId?: true
     name?: true
-    ageRestriction?: true
     sinopsis?: true
+    releaseDate?: true
+    posterUrl?: true
+    ageRestriction?: true
+    createdAt?: true
   }
 
   export type MovieCountAggregateInputType = {
     id?: true
+    tmdbId?: true
     name?: true
-    ageRestriction?: true
     sinopsis?: true
+    releaseDate?: true
+    posterUrl?: true
+    ageRestriction?: true
+    createdAt?: true
     _all?: true
   }
 
@@ -3536,9 +3585,13 @@ export namespace Prisma {
 
   export type MovieGroupByOutputType = {
     id: string
+    tmdbId: number
     name: string
+    sinopsis: string | null
+    releaseDate: Date | null
+    posterUrl: string | null
     ageRestriction: number | null
-    sinopsis: string
+    createdAt: Date
     _count: MovieCountAggregateOutputType | null
     _avg: MovieAvgAggregateOutputType | null
     _sum: MovieSumAggregateOutputType | null
@@ -3562,38 +3615,54 @@ export namespace Prisma {
 
   export type MovieSelect<ExtArgs extends $Extensions.InternalArgs = $Extensions.DefaultArgs> = $Extensions.GetSelect<{
     id?: boolean
+    tmdbId?: boolean
     name?: boolean
-    ageRestriction?: boolean
     sinopsis?: boolean
-    genders?: boolean | Movie$gendersArgs<ExtArgs>
+    releaseDate?: boolean
+    posterUrl?: boolean
+    ageRestriction?: boolean
+    createdAt?: boolean
+    genres?: boolean | Movie$genresArgs<ExtArgs>
     lists?: boolean | Movie$listsArgs<ExtArgs>
     _count?: boolean | MovieCountOutputTypeDefaultArgs<ExtArgs>
   }, ExtArgs["result"]["movie"]>
 
   export type MovieSelectCreateManyAndReturn<ExtArgs extends $Extensions.InternalArgs = $Extensions.DefaultArgs> = $Extensions.GetSelect<{
     id?: boolean
+    tmdbId?: boolean
     name?: boolean
-    ageRestriction?: boolean
     sinopsis?: boolean
+    releaseDate?: boolean
+    posterUrl?: boolean
+    ageRestriction?: boolean
+    createdAt?: boolean
   }, ExtArgs["result"]["movie"]>
 
   export type MovieSelectUpdateManyAndReturn<ExtArgs extends $Extensions.InternalArgs = $Extensions.DefaultArgs> = $Extensions.GetSelect<{
     id?: boolean
+    tmdbId?: boolean
     name?: boolean
-    ageRestriction?: boolean
     sinopsis?: boolean
+    releaseDate?: boolean
+    posterUrl?: boolean
+    ageRestriction?: boolean
+    createdAt?: boolean
   }, ExtArgs["result"]["movie"]>
 
   export type MovieSelectScalar = {
     id?: boolean
+    tmdbId?: boolean
     name?: boolean
-    ageRestriction?: boolean
     sinopsis?: boolean
+    releaseDate?: boolean
+    posterUrl?: boolean
+    ageRestriction?: boolean
+    createdAt?: boolean
   }
 
-  export type MovieOmit<ExtArgs extends $Extensions.InternalArgs = $Extensions.DefaultArgs> = $Extensions.GetOmit<"id" | "name" | "ageRestriction" | "sinopsis", ExtArgs["result"]["movie"]>
+  export type MovieOmit<ExtArgs extends $Extensions.InternalArgs = $Extensions.DefaultArgs> = $Extensions.GetOmit<"id" | "tmdbId" | "name" | "sinopsis" | "releaseDate" | "posterUrl" | "ageRestriction" | "createdAt", ExtArgs["result"]["movie"]>
   export type MovieInclude<ExtArgs extends $Extensions.InternalArgs = $Extensions.DefaultArgs> = {
-    genders?: boolean | Movie$gendersArgs<ExtArgs>
+    genres?: boolean | Movie$genresArgs<ExtArgs>
     lists?: boolean | Movie$listsArgs<ExtArgs>
     _count?: boolean | MovieCountOutputTypeDefaultArgs<ExtArgs>
   }
@@ -3603,14 +3672,18 @@ export namespace Prisma {
   export type $MoviePayload<ExtArgs extends $Extensions.InternalArgs = $Extensions.DefaultArgs> = {
     name: "Movie"
     objects: {
-      genders: Prisma.$MovieGenderPayload<ExtArgs>[]
+      genres: Prisma.$MovieGenrePayload<ExtArgs>[]
       lists: Prisma.$MovieListPayload<ExtArgs>[]
     }
     scalars: $Extensions.GetPayloadResult<{
       id: string
+      tmdbId: number
       name: string
+      sinopsis: string | null
+      releaseDate: Date | null
+      posterUrl: string | null
       ageRestriction: number | null
-      sinopsis: string
+      createdAt: Date
     }, ExtArgs["result"]["movie"]>
     composites: {}
   }
@@ -4005,7 +4078,7 @@ export namespace Prisma {
    */
   export interface Prisma__MovieClient<T, Null = never, ExtArgs extends $Extensions.InternalArgs = $Extensions.DefaultArgs, GlobalOmitOptions = {}> extends Prisma.PrismaPromise<T> {
     readonly [Symbol.toStringTag]: "PrismaPromise"
-    genders<T extends Movie$gendersArgs<ExtArgs> = {}>(args?: Subset<T, Movie$gendersArgs<ExtArgs>>): Prisma.PrismaPromise<$Result.GetResult<Prisma.$MovieGenderPayload<ExtArgs>, T, "findMany", GlobalOmitOptions> | Null>
+    genres<T extends Movie$genresArgs<ExtArgs> = {}>(args?: Subset<T, Movie$genresArgs<ExtArgs>>): Prisma.PrismaPromise<$Result.GetResult<Prisma.$MovieGenrePayload<ExtArgs>, T, "findMany", GlobalOmitOptions> | Null>
     lists<T extends Movie$listsArgs<ExtArgs> = {}>(args?: Subset<T, Movie$listsArgs<ExtArgs>>): Prisma.PrismaPromise<$Result.GetResult<Prisma.$MovieListPayload<ExtArgs>, T, "findMany", GlobalOmitOptions> | Null>
     /**
      * Attaches callbacks for the resolution and/or rejection of the Promise.
@@ -4037,9 +4110,13 @@ export namespace Prisma {
    */
   interface MovieFieldRefs {
     readonly id: FieldRef<"Movie", 'String'>
+    readonly tmdbId: FieldRef<"Movie", 'Int'>
     readonly name: FieldRef<"Movie", 'String'>
-    readonly ageRestriction: FieldRef<"Movie", 'Int'>
     readonly sinopsis: FieldRef<"Movie", 'String'>
+    readonly releaseDate: FieldRef<"Movie", 'DateTime'>
+    readonly posterUrl: FieldRef<"Movie", 'String'>
+    readonly ageRestriction: FieldRef<"Movie", 'Int'>
+    readonly createdAt: FieldRef<"Movie", 'DateTime'>
   }
     
 
@@ -4428,27 +4505,27 @@ export namespace Prisma {
   }
 
   /**
-   * Movie.genders
+   * Movie.genres
    */
-  export type Movie$gendersArgs<ExtArgs extends $Extensions.InternalArgs = $Extensions.DefaultArgs> = {
+  export type Movie$genresArgs<ExtArgs extends $Extensions.InternalArgs = $Extensions.DefaultArgs> = {
     /**
-     * Select specific fields to fetch from the MovieGender
+     * Select specific fields to fetch from the MovieGenre
      */
-    select?: MovieGenderSelect<ExtArgs> | null
+    select?: MovieGenreSelect<ExtArgs> | null
     /**
-     * Omit specific fields from the MovieGender
+     * Omit specific fields from the MovieGenre
      */
-    omit?: MovieGenderOmit<ExtArgs> | null
+    omit?: MovieGenreOmit<ExtArgs> | null
     /**
      * Choose, which related nodes to fetch as well
      */
-    include?: MovieGenderInclude<ExtArgs> | null
-    where?: MovieGenderWhereInput
-    orderBy?: MovieGenderOrderByWithRelationInput | MovieGenderOrderByWithRelationInput[]
-    cursor?: MovieGenderWhereUniqueInput
+    include?: MovieGenreInclude<ExtArgs> | null
+    where?: MovieGenreWhereInput
+    orderBy?: MovieGenreOrderByWithRelationInput | MovieGenreOrderByWithRelationInput[]
+    cursor?: MovieGenreWhereUniqueInput
     take?: number
     skip?: number
-    distinct?: MovieGenderScalarFieldEnum | MovieGenderScalarFieldEnum[]
+    distinct?: MovieGenreScalarFieldEnum | MovieGenreScalarFieldEnum[]
   }
 
   /**
@@ -4630,7 +4707,7 @@ export namespace Prisma {
   export type MovieListGroupByOutputType = {
     id: string
     name: string
-    description: string
+    description: string | null
     public: boolean
     userId: string
     _count: MovieListCountAggregateOutputType | null
@@ -4711,7 +4788,7 @@ export namespace Prisma {
     scalars: $Extensions.GetPayloadResult<{
       id: string
       name: string
-      description: string
+      description: string | null
       public: boolean
       userId: string
     }, ExtArgs["result"]["movieList"]>
@@ -5606,20 +5683,23 @@ export namespace Prisma {
   export type UserScalarFieldEnum = (typeof UserScalarFieldEnum)[keyof typeof UserScalarFieldEnum]
 
 
-  export const MovieGenderScalarFieldEnum: {
+  export const MovieGenreScalarFieldEnum: {
     id: 'id',
-    name: 'name',
-    description: 'description'
+    name: 'name'
   };
 
-  export type MovieGenderScalarFieldEnum = (typeof MovieGenderScalarFieldEnum)[keyof typeof MovieGenderScalarFieldEnum]
+  export type MovieGenreScalarFieldEnum = (typeof MovieGenreScalarFieldEnum)[keyof typeof MovieGenreScalarFieldEnum]
 
 
   export const MovieScalarFieldEnum: {
     id: 'id',
+    tmdbId: 'tmdbId',
     name: 'name',
+    sinopsis: 'sinopsis',
+    releaseDate: 'releaseDate',
+    posterUrl: 'posterUrl',
     ageRestriction: 'ageRestriction',
-    sinopsis: 'sinopsis'
+    createdAt: 'createdAt'
   };
 
   export type MovieScalarFieldEnum = (typeof MovieScalarFieldEnum)[keyof typeof MovieScalarFieldEnum]
@@ -5690,6 +5770,20 @@ export namespace Prisma {
    * Reference to a field of type 'Int[]'
    */
   export type ListIntFieldRefInput<$PrismaModel> = FieldRefInputType<$PrismaModel, 'Int[]'>
+    
+
+
+  /**
+   * Reference to a field of type 'DateTime'
+   */
+  export type DateTimeFieldRefInput<$PrismaModel> = FieldRefInputType<$PrismaModel, 'DateTime'>
+    
+
+
+  /**
+   * Reference to a field of type 'DateTime[]'
+   */
+  export type ListDateTimeFieldRefInput<$PrismaModel> = FieldRefInputType<$PrismaModel, 'DateTime[]'>
     
 
 
@@ -5767,49 +5861,46 @@ export namespace Prisma {
     password?: StringWithAggregatesFilter<"User"> | string
   }
 
-  export type MovieGenderWhereInput = {
-    AND?: MovieGenderWhereInput | MovieGenderWhereInput[]
-    OR?: MovieGenderWhereInput[]
-    NOT?: MovieGenderWhereInput | MovieGenderWhereInput[]
-    id?: StringFilter<"MovieGender"> | string
-    name?: StringFilter<"MovieGender"> | string
-    description?: StringFilter<"MovieGender"> | string
+  export type MovieGenreWhereInput = {
+    AND?: MovieGenreWhereInput | MovieGenreWhereInput[]
+    OR?: MovieGenreWhereInput[]
+    NOT?: MovieGenreWhereInput | MovieGenreWhereInput[]
+    id?: IntFilter<"MovieGenre"> | number
+    name?: StringFilter<"MovieGenre"> | string
     movies?: MovieListRelationFilter
   }
 
-  export type MovieGenderOrderByWithRelationInput = {
+  export type MovieGenreOrderByWithRelationInput = {
     id?: SortOrder
     name?: SortOrder
-    description?: SortOrder
     movies?: MovieOrderByRelationAggregateInput
   }
 
-  export type MovieGenderWhereUniqueInput = Prisma.AtLeast<{
-    id?: string
+  export type MovieGenreWhereUniqueInput = Prisma.AtLeast<{
+    id?: number
     name?: string
-    AND?: MovieGenderWhereInput | MovieGenderWhereInput[]
-    OR?: MovieGenderWhereInput[]
-    NOT?: MovieGenderWhereInput | MovieGenderWhereInput[]
-    description?: StringFilter<"MovieGender"> | string
+    AND?: MovieGenreWhereInput | MovieGenreWhereInput[]
+    OR?: MovieGenreWhereInput[]
+    NOT?: MovieGenreWhereInput | MovieGenreWhereInput[]
     movies?: MovieListRelationFilter
   }, "id" | "name">
 
-  export type MovieGenderOrderByWithAggregationInput = {
+  export type MovieGenreOrderByWithAggregationInput = {
     id?: SortOrder
     name?: SortOrder
-    description?: SortOrder
-    _count?: MovieGenderCountOrderByAggregateInput
-    _max?: MovieGenderMaxOrderByAggregateInput
-    _min?: MovieGenderMinOrderByAggregateInput
+    _count?: MovieGenreCountOrderByAggregateInput
+    _avg?: MovieGenreAvgOrderByAggregateInput
+    _max?: MovieGenreMaxOrderByAggregateInput
+    _min?: MovieGenreMinOrderByAggregateInput
+    _sum?: MovieGenreSumOrderByAggregateInput
   }
 
-  export type MovieGenderScalarWhereWithAggregatesInput = {
-    AND?: MovieGenderScalarWhereWithAggregatesInput | MovieGenderScalarWhereWithAggregatesInput[]
-    OR?: MovieGenderScalarWhereWithAggregatesInput[]
-    NOT?: MovieGenderScalarWhereWithAggregatesInput | MovieGenderScalarWhereWithAggregatesInput[]
-    id?: StringWithAggregatesFilter<"MovieGender"> | string
-    name?: StringWithAggregatesFilter<"MovieGender"> | string
-    description?: StringWithAggregatesFilter<"MovieGender"> | string
+  export type MovieGenreScalarWhereWithAggregatesInput = {
+    AND?: MovieGenreScalarWhereWithAggregatesInput | MovieGenreScalarWhereWithAggregatesInput[]
+    OR?: MovieGenreScalarWhereWithAggregatesInput[]
+    NOT?: MovieGenreScalarWhereWithAggregatesInput | MovieGenreScalarWhereWithAggregatesInput[]
+    id?: IntWithAggregatesFilter<"MovieGenre"> | number
+    name?: StringWithAggregatesFilter<"MovieGenre"> | string
   }
 
   export type MovieWhereInput = {
@@ -5817,39 +5908,55 @@ export namespace Prisma {
     OR?: MovieWhereInput[]
     NOT?: MovieWhereInput | MovieWhereInput[]
     id?: StringFilter<"Movie"> | string
+    tmdbId?: IntFilter<"Movie"> | number
     name?: StringFilter<"Movie"> | string
+    sinopsis?: StringNullableFilter<"Movie"> | string | null
+    releaseDate?: DateTimeNullableFilter<"Movie"> | Date | string | null
+    posterUrl?: StringNullableFilter<"Movie"> | string | null
     ageRestriction?: IntNullableFilter<"Movie"> | number | null
-    sinopsis?: StringFilter<"Movie"> | string
-    genders?: MovieGenderListRelationFilter
+    createdAt?: DateTimeFilter<"Movie"> | Date | string
+    genres?: MovieGenreListRelationFilter
     lists?: MovieListListRelationFilter
   }
 
   export type MovieOrderByWithRelationInput = {
     id?: SortOrder
+    tmdbId?: SortOrder
     name?: SortOrder
+    sinopsis?: SortOrderInput | SortOrder
+    releaseDate?: SortOrderInput | SortOrder
+    posterUrl?: SortOrderInput | SortOrder
     ageRestriction?: SortOrderInput | SortOrder
-    sinopsis?: SortOrder
-    genders?: MovieGenderOrderByRelationAggregateInput
+    createdAt?: SortOrder
+    genres?: MovieGenreOrderByRelationAggregateInput
     lists?: MovieListOrderByRelationAggregateInput
   }
 
   export type MovieWhereUniqueInput = Prisma.AtLeast<{
     id?: string
+    tmdbId?: number
     AND?: MovieWhereInput | MovieWhereInput[]
     OR?: MovieWhereInput[]
     NOT?: MovieWhereInput | MovieWhereInput[]
     name?: StringFilter<"Movie"> | string
+    sinopsis?: StringNullableFilter<"Movie"> | string | null
+    releaseDate?: DateTimeNullableFilter<"Movie"> | Date | string | null
+    posterUrl?: StringNullableFilter<"Movie"> | string | null
     ageRestriction?: IntNullableFilter<"Movie"> | number | null
-    sinopsis?: StringFilter<"Movie"> | string
-    genders?: MovieGenderListRelationFilter
+    createdAt?: DateTimeFilter<"Movie"> | Date | string
+    genres?: MovieGenreListRelationFilter
     lists?: MovieListListRelationFilter
-  }, "id">
+  }, "id" | "tmdbId">
 
   export type MovieOrderByWithAggregationInput = {
     id?: SortOrder
+    tmdbId?: SortOrder
     name?: SortOrder
+    sinopsis?: SortOrderInput | SortOrder
+    releaseDate?: SortOrderInput | SortOrder
+    posterUrl?: SortOrderInput | SortOrder
     ageRestriction?: SortOrderInput | SortOrder
-    sinopsis?: SortOrder
+    createdAt?: SortOrder
     _count?: MovieCountOrderByAggregateInput
     _avg?: MovieAvgOrderByAggregateInput
     _max?: MovieMaxOrderByAggregateInput
@@ -5862,9 +5969,13 @@ export namespace Prisma {
     OR?: MovieScalarWhereWithAggregatesInput[]
     NOT?: MovieScalarWhereWithAggregatesInput | MovieScalarWhereWithAggregatesInput[]
     id?: StringWithAggregatesFilter<"Movie"> | string
+    tmdbId?: IntWithAggregatesFilter<"Movie"> | number
     name?: StringWithAggregatesFilter<"Movie"> | string
+    sinopsis?: StringNullableWithAggregatesFilter<"Movie"> | string | null
+    releaseDate?: DateTimeNullableWithAggregatesFilter<"Movie"> | Date | string | null
+    posterUrl?: StringNullableWithAggregatesFilter<"Movie"> | string | null
     ageRestriction?: IntNullableWithAggregatesFilter<"Movie"> | number | null
-    sinopsis?: StringWithAggregatesFilter<"Movie"> | string
+    createdAt?: DateTimeWithAggregatesFilter<"Movie"> | Date | string
   }
 
   export type MovieListWhereInput = {
@@ -5873,7 +5984,7 @@ export namespace Prisma {
     NOT?: MovieListWhereInput | MovieListWhereInput[]
     id?: StringFilter<"MovieList"> | string
     name?: StringFilter<"MovieList"> | string
-    description?: StringFilter<"MovieList"> | string
+    description?: StringNullableFilter<"MovieList"> | string | null
     public?: BoolFilter<"MovieList"> | boolean
     userId?: StringFilter<"MovieList"> | string
     movies?: MovieListRelationFilter
@@ -5883,7 +5994,7 @@ export namespace Prisma {
   export type MovieListOrderByWithRelationInput = {
     id?: SortOrder
     name?: SortOrder
-    description?: SortOrder
+    description?: SortOrderInput | SortOrder
     public?: SortOrder
     userId?: SortOrder
     movies?: MovieOrderByRelationAggregateInput
@@ -5896,7 +6007,7 @@ export namespace Prisma {
     OR?: MovieListWhereInput[]
     NOT?: MovieListWhereInput | MovieListWhereInput[]
     name?: StringFilter<"MovieList"> | string
-    description?: StringFilter<"MovieList"> | string
+    description?: StringNullableFilter<"MovieList"> | string | null
     public?: BoolFilter<"MovieList"> | boolean
     userId?: StringFilter<"MovieList"> | string
     movies?: MovieListRelationFilter
@@ -5906,7 +6017,7 @@ export namespace Prisma {
   export type MovieListOrderByWithAggregationInput = {
     id?: SortOrder
     name?: SortOrder
-    description?: SortOrder
+    description?: SortOrderInput | SortOrder
     public?: SortOrder
     userId?: SortOrder
     _count?: MovieListCountOrderByAggregateInput
@@ -5920,7 +6031,7 @@ export namespace Prisma {
     NOT?: MovieListScalarWhereWithAggregatesInput | MovieListScalarWhereWithAggregatesInput[]
     id?: StringWithAggregatesFilter<"MovieList"> | string
     name?: StringWithAggregatesFilter<"MovieList"> | string
-    description?: StringWithAggregatesFilter<"MovieList"> | string
+    description?: StringNullableWithAggregatesFilter<"MovieList"> | string | null
     public?: BoolWithAggregatesFilter<"MovieList"> | boolean
     userId?: StringWithAggregatesFilter<"MovieList"> | string
   }
@@ -5978,113 +6089,131 @@ export namespace Prisma {
     password?: StringFieldUpdateOperationsInput | string
   }
 
-  export type MovieGenderCreateInput = {
-    id?: string
+  export type MovieGenreCreateInput = {
     name: string
-    description: string
-    movies?: MovieCreateNestedManyWithoutGendersInput
+    movies?: MovieCreateNestedManyWithoutGenresInput
   }
 
-  export type MovieGenderUncheckedCreateInput = {
-    id?: string
+  export type MovieGenreUncheckedCreateInput = {
+    id?: number
     name: string
-    description: string
-    movies?: MovieUncheckedCreateNestedManyWithoutGendersInput
+    movies?: MovieUncheckedCreateNestedManyWithoutGenresInput
   }
 
-  export type MovieGenderUpdateInput = {
-    id?: StringFieldUpdateOperationsInput | string
+  export type MovieGenreUpdateInput = {
     name?: StringFieldUpdateOperationsInput | string
-    description?: StringFieldUpdateOperationsInput | string
-    movies?: MovieUpdateManyWithoutGendersNestedInput
+    movies?: MovieUpdateManyWithoutGenresNestedInput
   }
 
-  export type MovieGenderUncheckedUpdateInput = {
-    id?: StringFieldUpdateOperationsInput | string
+  export type MovieGenreUncheckedUpdateInput = {
+    id?: IntFieldUpdateOperationsInput | number
     name?: StringFieldUpdateOperationsInput | string
-    description?: StringFieldUpdateOperationsInput | string
-    movies?: MovieUncheckedUpdateManyWithoutGendersNestedInput
+    movies?: MovieUncheckedUpdateManyWithoutGenresNestedInput
   }
 
-  export type MovieGenderCreateManyInput = {
-    id?: string
+  export type MovieGenreCreateManyInput = {
+    id?: number
     name: string
-    description: string
   }
 
-  export type MovieGenderUpdateManyMutationInput = {
-    id?: StringFieldUpdateOperationsInput | string
+  export type MovieGenreUpdateManyMutationInput = {
     name?: StringFieldUpdateOperationsInput | string
-    description?: StringFieldUpdateOperationsInput | string
   }
 
-  export type MovieGenderUncheckedUpdateManyInput = {
-    id?: StringFieldUpdateOperationsInput | string
+  export type MovieGenreUncheckedUpdateManyInput = {
+    id?: IntFieldUpdateOperationsInput | number
     name?: StringFieldUpdateOperationsInput | string
-    description?: StringFieldUpdateOperationsInput | string
   }
 
   export type MovieCreateInput = {
     id?: string
+    tmdbId: number
     name: string
+    sinopsis?: string | null
+    releaseDate?: Date | string | null
+    posterUrl?: string | null
     ageRestriction?: number | null
-    sinopsis: string
-    genders?: MovieGenderCreateNestedManyWithoutMoviesInput
+    createdAt?: Date | string
+    genres?: MovieGenreCreateNestedManyWithoutMoviesInput
     lists?: MovieListCreateNestedManyWithoutMoviesInput
   }
 
   export type MovieUncheckedCreateInput = {
     id?: string
+    tmdbId: number
     name: string
+    sinopsis?: string | null
+    releaseDate?: Date | string | null
+    posterUrl?: string | null
     ageRestriction?: number | null
-    sinopsis: string
-    genders?: MovieGenderUncheckedCreateNestedManyWithoutMoviesInput
+    createdAt?: Date | string
+    genres?: MovieGenreUncheckedCreateNestedManyWithoutMoviesInput
     lists?: MovieListUncheckedCreateNestedManyWithoutMoviesInput
   }
 
   export type MovieUpdateInput = {
     id?: StringFieldUpdateOperationsInput | string
+    tmdbId?: IntFieldUpdateOperationsInput | number
     name?: StringFieldUpdateOperationsInput | string
+    sinopsis?: NullableStringFieldUpdateOperationsInput | string | null
+    releaseDate?: NullableDateTimeFieldUpdateOperationsInput | Date | string | null
+    posterUrl?: NullableStringFieldUpdateOperationsInput | string | null
     ageRestriction?: NullableIntFieldUpdateOperationsInput | number | null
-    sinopsis?: StringFieldUpdateOperationsInput | string
-    genders?: MovieGenderUpdateManyWithoutMoviesNestedInput
+    createdAt?: DateTimeFieldUpdateOperationsInput | Date | string
+    genres?: MovieGenreUpdateManyWithoutMoviesNestedInput
     lists?: MovieListUpdateManyWithoutMoviesNestedInput
   }
 
   export type MovieUncheckedUpdateInput = {
     id?: StringFieldUpdateOperationsInput | string
+    tmdbId?: IntFieldUpdateOperationsInput | number
     name?: StringFieldUpdateOperationsInput | string
+    sinopsis?: NullableStringFieldUpdateOperationsInput | string | null
+    releaseDate?: NullableDateTimeFieldUpdateOperationsInput | Date | string | null
+    posterUrl?: NullableStringFieldUpdateOperationsInput | string | null
     ageRestriction?: NullableIntFieldUpdateOperationsInput | number | null
-    sinopsis?: StringFieldUpdateOperationsInput | string
-    genders?: MovieGenderUncheckedUpdateManyWithoutMoviesNestedInput
+    createdAt?: DateTimeFieldUpdateOperationsInput | Date | string
+    genres?: MovieGenreUncheckedUpdateManyWithoutMoviesNestedInput
     lists?: MovieListUncheckedUpdateManyWithoutMoviesNestedInput
   }
 
   export type MovieCreateManyInput = {
     id?: string
+    tmdbId: number
     name: string
+    sinopsis?: string | null
+    releaseDate?: Date | string | null
+    posterUrl?: string | null
     ageRestriction?: number | null
-    sinopsis: string
+    createdAt?: Date | string
   }
 
   export type MovieUpdateManyMutationInput = {
     id?: StringFieldUpdateOperationsInput | string
+    tmdbId?: IntFieldUpdateOperationsInput | number
     name?: StringFieldUpdateOperationsInput | string
+    sinopsis?: NullableStringFieldUpdateOperationsInput | string | null
+    releaseDate?: NullableDateTimeFieldUpdateOperationsInput | Date | string | null
+    posterUrl?: NullableStringFieldUpdateOperationsInput | string | null
     ageRestriction?: NullableIntFieldUpdateOperationsInput | number | null
-    sinopsis?: StringFieldUpdateOperationsInput | string
+    createdAt?: DateTimeFieldUpdateOperationsInput | Date | string
   }
 
   export type MovieUncheckedUpdateManyInput = {
     id?: StringFieldUpdateOperationsInput | string
+    tmdbId?: IntFieldUpdateOperationsInput | number
     name?: StringFieldUpdateOperationsInput | string
+    sinopsis?: NullableStringFieldUpdateOperationsInput | string | null
+    releaseDate?: NullableDateTimeFieldUpdateOperationsInput | Date | string | null
+    posterUrl?: NullableStringFieldUpdateOperationsInput | string | null
     ageRestriction?: NullableIntFieldUpdateOperationsInput | number | null
-    sinopsis?: StringFieldUpdateOperationsInput | string
+    createdAt?: DateTimeFieldUpdateOperationsInput | Date | string
   }
 
   export type MovieListCreateInput = {
     id?: string
     name: string
-    description: string
+    description?: string | null
     public?: boolean
     movies?: MovieCreateNestedManyWithoutListsInput
     User: UserCreateNestedOneWithoutListsInput
@@ -6093,7 +6222,7 @@ export namespace Prisma {
   export type MovieListUncheckedCreateInput = {
     id?: string
     name: string
-    description: string
+    description?: string | null
     public?: boolean
     userId: string
     movies?: MovieUncheckedCreateNestedManyWithoutListsInput
@@ -6102,7 +6231,7 @@ export namespace Prisma {
   export type MovieListUpdateInput = {
     id?: StringFieldUpdateOperationsInput | string
     name?: StringFieldUpdateOperationsInput | string
-    description?: StringFieldUpdateOperationsInput | string
+    description?: NullableStringFieldUpdateOperationsInput | string | null
     public?: BoolFieldUpdateOperationsInput | boolean
     movies?: MovieUpdateManyWithoutListsNestedInput
     User?: UserUpdateOneRequiredWithoutListsNestedInput
@@ -6111,7 +6240,7 @@ export namespace Prisma {
   export type MovieListUncheckedUpdateInput = {
     id?: StringFieldUpdateOperationsInput | string
     name?: StringFieldUpdateOperationsInput | string
-    description?: StringFieldUpdateOperationsInput | string
+    description?: NullableStringFieldUpdateOperationsInput | string | null
     public?: BoolFieldUpdateOperationsInput | boolean
     userId?: StringFieldUpdateOperationsInput | string
     movies?: MovieUncheckedUpdateManyWithoutListsNestedInput
@@ -6120,7 +6249,7 @@ export namespace Prisma {
   export type MovieListCreateManyInput = {
     id?: string
     name: string
-    description: string
+    description?: string | null
     public?: boolean
     userId: string
   }
@@ -6128,14 +6257,14 @@ export namespace Prisma {
   export type MovieListUpdateManyMutationInput = {
     id?: StringFieldUpdateOperationsInput | string
     name?: StringFieldUpdateOperationsInput | string
-    description?: StringFieldUpdateOperationsInput | string
+    description?: NullableStringFieldUpdateOperationsInput | string | null
     public?: BoolFieldUpdateOperationsInput | boolean
   }
 
   export type MovieListUncheckedUpdateManyInput = {
     id?: StringFieldUpdateOperationsInput | string
     name?: StringFieldUpdateOperationsInput | string
-    description?: StringFieldUpdateOperationsInput | string
+    description?: NullableStringFieldUpdateOperationsInput | string | null
     public?: BoolFieldUpdateOperationsInput | boolean
     userId?: StringFieldUpdateOperationsInput | string
   }
@@ -6204,6 +6333,17 @@ export namespace Prisma {
     _max?: NestedStringFilter<$PrismaModel>
   }
 
+  export type IntFilter<$PrismaModel = never> = {
+    equals?: number | IntFieldRefInput<$PrismaModel>
+    in?: number[] | ListIntFieldRefInput<$PrismaModel>
+    notIn?: number[] | ListIntFieldRefInput<$PrismaModel>
+    lt?: number | IntFieldRefInput<$PrismaModel>
+    lte?: number | IntFieldRefInput<$PrismaModel>
+    gt?: number | IntFieldRefInput<$PrismaModel>
+    gte?: number | IntFieldRefInput<$PrismaModel>
+    not?: NestedIntFilter<$PrismaModel> | number
+  }
+
   export type MovieListRelationFilter = {
     every?: MovieWhereInput
     some?: MovieWhereInput
@@ -6214,22 +6354,69 @@ export namespace Prisma {
     _count?: SortOrder
   }
 
-  export type MovieGenderCountOrderByAggregateInput = {
+  export type MovieGenreCountOrderByAggregateInput = {
     id?: SortOrder
     name?: SortOrder
-    description?: SortOrder
   }
 
-  export type MovieGenderMaxOrderByAggregateInput = {
+  export type MovieGenreAvgOrderByAggregateInput = {
     id?: SortOrder
-    name?: SortOrder
-    description?: SortOrder
   }
 
-  export type MovieGenderMinOrderByAggregateInput = {
+  export type MovieGenreMaxOrderByAggregateInput = {
     id?: SortOrder
     name?: SortOrder
-    description?: SortOrder
+  }
+
+  export type MovieGenreMinOrderByAggregateInput = {
+    id?: SortOrder
+    name?: SortOrder
+  }
+
+  export type MovieGenreSumOrderByAggregateInput = {
+    id?: SortOrder
+  }
+
+  export type IntWithAggregatesFilter<$PrismaModel = never> = {
+    equals?: number | IntFieldRefInput<$PrismaModel>
+    in?: number[] | ListIntFieldRefInput<$PrismaModel>
+    notIn?: number[] | ListIntFieldRefInput<$PrismaModel>
+    lt?: number | IntFieldRefInput<$PrismaModel>
+    lte?: number | IntFieldRefInput<$PrismaModel>
+    gt?: number | IntFieldRefInput<$PrismaModel>
+    gte?: number | IntFieldRefInput<$PrismaModel>
+    not?: NestedIntWithAggregatesFilter<$PrismaModel> | number
+    _count?: NestedIntFilter<$PrismaModel>
+    _avg?: NestedFloatFilter<$PrismaModel>
+    _sum?: NestedIntFilter<$PrismaModel>
+    _min?: NestedIntFilter<$PrismaModel>
+    _max?: NestedIntFilter<$PrismaModel>
+  }
+
+  export type StringNullableFilter<$PrismaModel = never> = {
+    equals?: string | StringFieldRefInput<$PrismaModel> | null
+    in?: string[] | ListStringFieldRefInput<$PrismaModel> | null
+    notIn?: string[] | ListStringFieldRefInput<$PrismaModel> | null
+    lt?: string | StringFieldRefInput<$PrismaModel>
+    lte?: string | StringFieldRefInput<$PrismaModel>
+    gt?: string | StringFieldRefInput<$PrismaModel>
+    gte?: string | StringFieldRefInput<$PrismaModel>
+    contains?: string | StringFieldRefInput<$PrismaModel>
+    startsWith?: string | StringFieldRefInput<$PrismaModel>
+    endsWith?: string | StringFieldRefInput<$PrismaModel>
+    mode?: QueryMode
+    not?: NestedStringNullableFilter<$PrismaModel> | string | null
+  }
+
+  export type DateTimeNullableFilter<$PrismaModel = never> = {
+    equals?: Date | string | DateTimeFieldRefInput<$PrismaModel> | null
+    in?: Date[] | string[] | ListDateTimeFieldRefInput<$PrismaModel> | null
+    notIn?: Date[] | string[] | ListDateTimeFieldRefInput<$PrismaModel> | null
+    lt?: Date | string | DateTimeFieldRefInput<$PrismaModel>
+    lte?: Date | string | DateTimeFieldRefInput<$PrismaModel>
+    gt?: Date | string | DateTimeFieldRefInput<$PrismaModel>
+    gte?: Date | string | DateTimeFieldRefInput<$PrismaModel>
+    not?: NestedDateTimeNullableFilter<$PrismaModel> | Date | string | null
   }
 
   export type IntNullableFilter<$PrismaModel = never> = {
@@ -6243,10 +6430,21 @@ export namespace Prisma {
     not?: NestedIntNullableFilter<$PrismaModel> | number | null
   }
 
-  export type MovieGenderListRelationFilter = {
-    every?: MovieGenderWhereInput
-    some?: MovieGenderWhereInput
-    none?: MovieGenderWhereInput
+  export type DateTimeFilter<$PrismaModel = never> = {
+    equals?: Date | string | DateTimeFieldRefInput<$PrismaModel>
+    in?: Date[] | string[] | ListDateTimeFieldRefInput<$PrismaModel>
+    notIn?: Date[] | string[] | ListDateTimeFieldRefInput<$PrismaModel>
+    lt?: Date | string | DateTimeFieldRefInput<$PrismaModel>
+    lte?: Date | string | DateTimeFieldRefInput<$PrismaModel>
+    gt?: Date | string | DateTimeFieldRefInput<$PrismaModel>
+    gte?: Date | string | DateTimeFieldRefInput<$PrismaModel>
+    not?: NestedDateTimeFilter<$PrismaModel> | Date | string
+  }
+
+  export type MovieGenreListRelationFilter = {
+    every?: MovieGenreWhereInput
+    some?: MovieGenreWhereInput
+    none?: MovieGenreWhereInput
   }
 
   export type SortOrderInput = {
@@ -6254,37 +6452,83 @@ export namespace Prisma {
     nulls?: NullsOrder
   }
 
-  export type MovieGenderOrderByRelationAggregateInput = {
+  export type MovieGenreOrderByRelationAggregateInput = {
     _count?: SortOrder
   }
 
   export type MovieCountOrderByAggregateInput = {
     id?: SortOrder
+    tmdbId?: SortOrder
     name?: SortOrder
-    ageRestriction?: SortOrder
     sinopsis?: SortOrder
+    releaseDate?: SortOrder
+    posterUrl?: SortOrder
+    ageRestriction?: SortOrder
+    createdAt?: SortOrder
   }
 
   export type MovieAvgOrderByAggregateInput = {
+    tmdbId?: SortOrder
     ageRestriction?: SortOrder
   }
 
   export type MovieMaxOrderByAggregateInput = {
     id?: SortOrder
+    tmdbId?: SortOrder
     name?: SortOrder
-    ageRestriction?: SortOrder
     sinopsis?: SortOrder
+    releaseDate?: SortOrder
+    posterUrl?: SortOrder
+    ageRestriction?: SortOrder
+    createdAt?: SortOrder
   }
 
   export type MovieMinOrderByAggregateInput = {
     id?: SortOrder
+    tmdbId?: SortOrder
     name?: SortOrder
-    ageRestriction?: SortOrder
     sinopsis?: SortOrder
+    releaseDate?: SortOrder
+    posterUrl?: SortOrder
+    ageRestriction?: SortOrder
+    createdAt?: SortOrder
   }
 
   export type MovieSumOrderByAggregateInput = {
+    tmdbId?: SortOrder
     ageRestriction?: SortOrder
+  }
+
+  export type StringNullableWithAggregatesFilter<$PrismaModel = never> = {
+    equals?: string | StringFieldRefInput<$PrismaModel> | null
+    in?: string[] | ListStringFieldRefInput<$PrismaModel> | null
+    notIn?: string[] | ListStringFieldRefInput<$PrismaModel> | null
+    lt?: string | StringFieldRefInput<$PrismaModel>
+    lte?: string | StringFieldRefInput<$PrismaModel>
+    gt?: string | StringFieldRefInput<$PrismaModel>
+    gte?: string | StringFieldRefInput<$PrismaModel>
+    contains?: string | StringFieldRefInput<$PrismaModel>
+    startsWith?: string | StringFieldRefInput<$PrismaModel>
+    endsWith?: string | StringFieldRefInput<$PrismaModel>
+    mode?: QueryMode
+    not?: NestedStringNullableWithAggregatesFilter<$PrismaModel> | string | null
+    _count?: NestedIntNullableFilter<$PrismaModel>
+    _min?: NestedStringNullableFilter<$PrismaModel>
+    _max?: NestedStringNullableFilter<$PrismaModel>
+  }
+
+  export type DateTimeNullableWithAggregatesFilter<$PrismaModel = never> = {
+    equals?: Date | string | DateTimeFieldRefInput<$PrismaModel> | null
+    in?: Date[] | string[] | ListDateTimeFieldRefInput<$PrismaModel> | null
+    notIn?: Date[] | string[] | ListDateTimeFieldRefInput<$PrismaModel> | null
+    lt?: Date | string | DateTimeFieldRefInput<$PrismaModel>
+    lte?: Date | string | DateTimeFieldRefInput<$PrismaModel>
+    gt?: Date | string | DateTimeFieldRefInput<$PrismaModel>
+    gte?: Date | string | DateTimeFieldRefInput<$PrismaModel>
+    not?: NestedDateTimeNullableWithAggregatesFilter<$PrismaModel> | Date | string | null
+    _count?: NestedIntNullableFilter<$PrismaModel>
+    _min?: NestedDateTimeNullableFilter<$PrismaModel>
+    _max?: NestedDateTimeNullableFilter<$PrismaModel>
   }
 
   export type IntNullableWithAggregatesFilter<$PrismaModel = never> = {
@@ -6301,6 +6545,20 @@ export namespace Prisma {
     _sum?: NestedIntNullableFilter<$PrismaModel>
     _min?: NestedIntNullableFilter<$PrismaModel>
     _max?: NestedIntNullableFilter<$PrismaModel>
+  }
+
+  export type DateTimeWithAggregatesFilter<$PrismaModel = never> = {
+    equals?: Date | string | DateTimeFieldRefInput<$PrismaModel>
+    in?: Date[] | string[] | ListDateTimeFieldRefInput<$PrismaModel>
+    notIn?: Date[] | string[] | ListDateTimeFieldRefInput<$PrismaModel>
+    lt?: Date | string | DateTimeFieldRefInput<$PrismaModel>
+    lte?: Date | string | DateTimeFieldRefInput<$PrismaModel>
+    gt?: Date | string | DateTimeFieldRefInput<$PrismaModel>
+    gte?: Date | string | DateTimeFieldRefInput<$PrismaModel>
+    not?: NestedDateTimeWithAggregatesFilter<$PrismaModel> | Date | string
+    _count?: NestedIntFilter<$PrismaModel>
+    _min?: NestedDateTimeFilter<$PrismaModel>
+    _max?: NestedDateTimeFilter<$PrismaModel>
   }
 
   export type BoolFilter<$PrismaModel = never> = {
@@ -6391,48 +6649,56 @@ export namespace Prisma {
     deleteMany?: MovieListScalarWhereInput | MovieListScalarWhereInput[]
   }
 
-  export type MovieCreateNestedManyWithoutGendersInput = {
-    create?: XOR<MovieCreateWithoutGendersInput, MovieUncheckedCreateWithoutGendersInput> | MovieCreateWithoutGendersInput[] | MovieUncheckedCreateWithoutGendersInput[]
-    connectOrCreate?: MovieCreateOrConnectWithoutGendersInput | MovieCreateOrConnectWithoutGendersInput[]
+  export type MovieCreateNestedManyWithoutGenresInput = {
+    create?: XOR<MovieCreateWithoutGenresInput, MovieUncheckedCreateWithoutGenresInput> | MovieCreateWithoutGenresInput[] | MovieUncheckedCreateWithoutGenresInput[]
+    connectOrCreate?: MovieCreateOrConnectWithoutGenresInput | MovieCreateOrConnectWithoutGenresInput[]
     connect?: MovieWhereUniqueInput | MovieWhereUniqueInput[]
   }
 
-  export type MovieUncheckedCreateNestedManyWithoutGendersInput = {
-    create?: XOR<MovieCreateWithoutGendersInput, MovieUncheckedCreateWithoutGendersInput> | MovieCreateWithoutGendersInput[] | MovieUncheckedCreateWithoutGendersInput[]
-    connectOrCreate?: MovieCreateOrConnectWithoutGendersInput | MovieCreateOrConnectWithoutGendersInput[]
+  export type MovieUncheckedCreateNestedManyWithoutGenresInput = {
+    create?: XOR<MovieCreateWithoutGenresInput, MovieUncheckedCreateWithoutGenresInput> | MovieCreateWithoutGenresInput[] | MovieUncheckedCreateWithoutGenresInput[]
+    connectOrCreate?: MovieCreateOrConnectWithoutGenresInput | MovieCreateOrConnectWithoutGenresInput[]
     connect?: MovieWhereUniqueInput | MovieWhereUniqueInput[]
   }
 
-  export type MovieUpdateManyWithoutGendersNestedInput = {
-    create?: XOR<MovieCreateWithoutGendersInput, MovieUncheckedCreateWithoutGendersInput> | MovieCreateWithoutGendersInput[] | MovieUncheckedCreateWithoutGendersInput[]
-    connectOrCreate?: MovieCreateOrConnectWithoutGendersInput | MovieCreateOrConnectWithoutGendersInput[]
-    upsert?: MovieUpsertWithWhereUniqueWithoutGendersInput | MovieUpsertWithWhereUniqueWithoutGendersInput[]
+  export type MovieUpdateManyWithoutGenresNestedInput = {
+    create?: XOR<MovieCreateWithoutGenresInput, MovieUncheckedCreateWithoutGenresInput> | MovieCreateWithoutGenresInput[] | MovieUncheckedCreateWithoutGenresInput[]
+    connectOrCreate?: MovieCreateOrConnectWithoutGenresInput | MovieCreateOrConnectWithoutGenresInput[]
+    upsert?: MovieUpsertWithWhereUniqueWithoutGenresInput | MovieUpsertWithWhereUniqueWithoutGenresInput[]
     set?: MovieWhereUniqueInput | MovieWhereUniqueInput[]
     disconnect?: MovieWhereUniqueInput | MovieWhereUniqueInput[]
     delete?: MovieWhereUniqueInput | MovieWhereUniqueInput[]
     connect?: MovieWhereUniqueInput | MovieWhereUniqueInput[]
-    update?: MovieUpdateWithWhereUniqueWithoutGendersInput | MovieUpdateWithWhereUniqueWithoutGendersInput[]
-    updateMany?: MovieUpdateManyWithWhereWithoutGendersInput | MovieUpdateManyWithWhereWithoutGendersInput[]
+    update?: MovieUpdateWithWhereUniqueWithoutGenresInput | MovieUpdateWithWhereUniqueWithoutGenresInput[]
+    updateMany?: MovieUpdateManyWithWhereWithoutGenresInput | MovieUpdateManyWithWhereWithoutGenresInput[]
     deleteMany?: MovieScalarWhereInput | MovieScalarWhereInput[]
   }
 
-  export type MovieUncheckedUpdateManyWithoutGendersNestedInput = {
-    create?: XOR<MovieCreateWithoutGendersInput, MovieUncheckedCreateWithoutGendersInput> | MovieCreateWithoutGendersInput[] | MovieUncheckedCreateWithoutGendersInput[]
-    connectOrCreate?: MovieCreateOrConnectWithoutGendersInput | MovieCreateOrConnectWithoutGendersInput[]
-    upsert?: MovieUpsertWithWhereUniqueWithoutGendersInput | MovieUpsertWithWhereUniqueWithoutGendersInput[]
+  export type IntFieldUpdateOperationsInput = {
+    set?: number
+    increment?: number
+    decrement?: number
+    multiply?: number
+    divide?: number
+  }
+
+  export type MovieUncheckedUpdateManyWithoutGenresNestedInput = {
+    create?: XOR<MovieCreateWithoutGenresInput, MovieUncheckedCreateWithoutGenresInput> | MovieCreateWithoutGenresInput[] | MovieUncheckedCreateWithoutGenresInput[]
+    connectOrCreate?: MovieCreateOrConnectWithoutGenresInput | MovieCreateOrConnectWithoutGenresInput[]
+    upsert?: MovieUpsertWithWhereUniqueWithoutGenresInput | MovieUpsertWithWhereUniqueWithoutGenresInput[]
     set?: MovieWhereUniqueInput | MovieWhereUniqueInput[]
     disconnect?: MovieWhereUniqueInput | MovieWhereUniqueInput[]
     delete?: MovieWhereUniqueInput | MovieWhereUniqueInput[]
     connect?: MovieWhereUniqueInput | MovieWhereUniqueInput[]
-    update?: MovieUpdateWithWhereUniqueWithoutGendersInput | MovieUpdateWithWhereUniqueWithoutGendersInput[]
-    updateMany?: MovieUpdateManyWithWhereWithoutGendersInput | MovieUpdateManyWithWhereWithoutGendersInput[]
+    update?: MovieUpdateWithWhereUniqueWithoutGenresInput | MovieUpdateWithWhereUniqueWithoutGenresInput[]
+    updateMany?: MovieUpdateManyWithWhereWithoutGenresInput | MovieUpdateManyWithWhereWithoutGenresInput[]
     deleteMany?: MovieScalarWhereInput | MovieScalarWhereInput[]
   }
 
-  export type MovieGenderCreateNestedManyWithoutMoviesInput = {
-    create?: XOR<MovieGenderCreateWithoutMoviesInput, MovieGenderUncheckedCreateWithoutMoviesInput> | MovieGenderCreateWithoutMoviesInput[] | MovieGenderUncheckedCreateWithoutMoviesInput[]
-    connectOrCreate?: MovieGenderCreateOrConnectWithoutMoviesInput | MovieGenderCreateOrConnectWithoutMoviesInput[]
-    connect?: MovieGenderWhereUniqueInput | MovieGenderWhereUniqueInput[]
+  export type MovieGenreCreateNestedManyWithoutMoviesInput = {
+    create?: XOR<MovieGenreCreateWithoutMoviesInput, MovieGenreUncheckedCreateWithoutMoviesInput> | MovieGenreCreateWithoutMoviesInput[] | MovieGenreUncheckedCreateWithoutMoviesInput[]
+    connectOrCreate?: MovieGenreCreateOrConnectWithoutMoviesInput | MovieGenreCreateOrConnectWithoutMoviesInput[]
+    connect?: MovieGenreWhereUniqueInput | MovieGenreWhereUniqueInput[]
   }
 
   export type MovieListCreateNestedManyWithoutMoviesInput = {
@@ -6441,16 +6707,24 @@ export namespace Prisma {
     connect?: MovieListWhereUniqueInput | MovieListWhereUniqueInput[]
   }
 
-  export type MovieGenderUncheckedCreateNestedManyWithoutMoviesInput = {
-    create?: XOR<MovieGenderCreateWithoutMoviesInput, MovieGenderUncheckedCreateWithoutMoviesInput> | MovieGenderCreateWithoutMoviesInput[] | MovieGenderUncheckedCreateWithoutMoviesInput[]
-    connectOrCreate?: MovieGenderCreateOrConnectWithoutMoviesInput | MovieGenderCreateOrConnectWithoutMoviesInput[]
-    connect?: MovieGenderWhereUniqueInput | MovieGenderWhereUniqueInput[]
+  export type MovieGenreUncheckedCreateNestedManyWithoutMoviesInput = {
+    create?: XOR<MovieGenreCreateWithoutMoviesInput, MovieGenreUncheckedCreateWithoutMoviesInput> | MovieGenreCreateWithoutMoviesInput[] | MovieGenreUncheckedCreateWithoutMoviesInput[]
+    connectOrCreate?: MovieGenreCreateOrConnectWithoutMoviesInput | MovieGenreCreateOrConnectWithoutMoviesInput[]
+    connect?: MovieGenreWhereUniqueInput | MovieGenreWhereUniqueInput[]
   }
 
   export type MovieListUncheckedCreateNestedManyWithoutMoviesInput = {
     create?: XOR<MovieListCreateWithoutMoviesInput, MovieListUncheckedCreateWithoutMoviesInput> | MovieListCreateWithoutMoviesInput[] | MovieListUncheckedCreateWithoutMoviesInput[]
     connectOrCreate?: MovieListCreateOrConnectWithoutMoviesInput | MovieListCreateOrConnectWithoutMoviesInput[]
     connect?: MovieListWhereUniqueInput | MovieListWhereUniqueInput[]
+  }
+
+  export type NullableStringFieldUpdateOperationsInput = {
+    set?: string | null
+  }
+
+  export type NullableDateTimeFieldUpdateOperationsInput = {
+    set?: Date | string | null
   }
 
   export type NullableIntFieldUpdateOperationsInput = {
@@ -6461,17 +6735,21 @@ export namespace Prisma {
     divide?: number
   }
 
-  export type MovieGenderUpdateManyWithoutMoviesNestedInput = {
-    create?: XOR<MovieGenderCreateWithoutMoviesInput, MovieGenderUncheckedCreateWithoutMoviesInput> | MovieGenderCreateWithoutMoviesInput[] | MovieGenderUncheckedCreateWithoutMoviesInput[]
-    connectOrCreate?: MovieGenderCreateOrConnectWithoutMoviesInput | MovieGenderCreateOrConnectWithoutMoviesInput[]
-    upsert?: MovieGenderUpsertWithWhereUniqueWithoutMoviesInput | MovieGenderUpsertWithWhereUniqueWithoutMoviesInput[]
-    set?: MovieGenderWhereUniqueInput | MovieGenderWhereUniqueInput[]
-    disconnect?: MovieGenderWhereUniqueInput | MovieGenderWhereUniqueInput[]
-    delete?: MovieGenderWhereUniqueInput | MovieGenderWhereUniqueInput[]
-    connect?: MovieGenderWhereUniqueInput | MovieGenderWhereUniqueInput[]
-    update?: MovieGenderUpdateWithWhereUniqueWithoutMoviesInput | MovieGenderUpdateWithWhereUniqueWithoutMoviesInput[]
-    updateMany?: MovieGenderUpdateManyWithWhereWithoutMoviesInput | MovieGenderUpdateManyWithWhereWithoutMoviesInput[]
-    deleteMany?: MovieGenderScalarWhereInput | MovieGenderScalarWhereInput[]
+  export type DateTimeFieldUpdateOperationsInput = {
+    set?: Date | string
+  }
+
+  export type MovieGenreUpdateManyWithoutMoviesNestedInput = {
+    create?: XOR<MovieGenreCreateWithoutMoviesInput, MovieGenreUncheckedCreateWithoutMoviesInput> | MovieGenreCreateWithoutMoviesInput[] | MovieGenreUncheckedCreateWithoutMoviesInput[]
+    connectOrCreate?: MovieGenreCreateOrConnectWithoutMoviesInput | MovieGenreCreateOrConnectWithoutMoviesInput[]
+    upsert?: MovieGenreUpsertWithWhereUniqueWithoutMoviesInput | MovieGenreUpsertWithWhereUniqueWithoutMoviesInput[]
+    set?: MovieGenreWhereUniqueInput | MovieGenreWhereUniqueInput[]
+    disconnect?: MovieGenreWhereUniqueInput | MovieGenreWhereUniqueInput[]
+    delete?: MovieGenreWhereUniqueInput | MovieGenreWhereUniqueInput[]
+    connect?: MovieGenreWhereUniqueInput | MovieGenreWhereUniqueInput[]
+    update?: MovieGenreUpdateWithWhereUniqueWithoutMoviesInput | MovieGenreUpdateWithWhereUniqueWithoutMoviesInput[]
+    updateMany?: MovieGenreUpdateManyWithWhereWithoutMoviesInput | MovieGenreUpdateManyWithWhereWithoutMoviesInput[]
+    deleteMany?: MovieGenreScalarWhereInput | MovieGenreScalarWhereInput[]
   }
 
   export type MovieListUpdateManyWithoutMoviesNestedInput = {
@@ -6487,17 +6765,17 @@ export namespace Prisma {
     deleteMany?: MovieListScalarWhereInput | MovieListScalarWhereInput[]
   }
 
-  export type MovieGenderUncheckedUpdateManyWithoutMoviesNestedInput = {
-    create?: XOR<MovieGenderCreateWithoutMoviesInput, MovieGenderUncheckedCreateWithoutMoviesInput> | MovieGenderCreateWithoutMoviesInput[] | MovieGenderUncheckedCreateWithoutMoviesInput[]
-    connectOrCreate?: MovieGenderCreateOrConnectWithoutMoviesInput | MovieGenderCreateOrConnectWithoutMoviesInput[]
-    upsert?: MovieGenderUpsertWithWhereUniqueWithoutMoviesInput | MovieGenderUpsertWithWhereUniqueWithoutMoviesInput[]
-    set?: MovieGenderWhereUniqueInput | MovieGenderWhereUniqueInput[]
-    disconnect?: MovieGenderWhereUniqueInput | MovieGenderWhereUniqueInput[]
-    delete?: MovieGenderWhereUniqueInput | MovieGenderWhereUniqueInput[]
-    connect?: MovieGenderWhereUniqueInput | MovieGenderWhereUniqueInput[]
-    update?: MovieGenderUpdateWithWhereUniqueWithoutMoviesInput | MovieGenderUpdateWithWhereUniqueWithoutMoviesInput[]
-    updateMany?: MovieGenderUpdateManyWithWhereWithoutMoviesInput | MovieGenderUpdateManyWithWhereWithoutMoviesInput[]
-    deleteMany?: MovieGenderScalarWhereInput | MovieGenderScalarWhereInput[]
+  export type MovieGenreUncheckedUpdateManyWithoutMoviesNestedInput = {
+    create?: XOR<MovieGenreCreateWithoutMoviesInput, MovieGenreUncheckedCreateWithoutMoviesInput> | MovieGenreCreateWithoutMoviesInput[] | MovieGenreUncheckedCreateWithoutMoviesInput[]
+    connectOrCreate?: MovieGenreCreateOrConnectWithoutMoviesInput | MovieGenreCreateOrConnectWithoutMoviesInput[]
+    upsert?: MovieGenreUpsertWithWhereUniqueWithoutMoviesInput | MovieGenreUpsertWithWhereUniqueWithoutMoviesInput[]
+    set?: MovieGenreWhereUniqueInput | MovieGenreWhereUniqueInput[]
+    disconnect?: MovieGenreWhereUniqueInput | MovieGenreWhereUniqueInput[]
+    delete?: MovieGenreWhereUniqueInput | MovieGenreWhereUniqueInput[]
+    connect?: MovieGenreWhereUniqueInput | MovieGenreWhereUniqueInput[]
+    update?: MovieGenreUpdateWithWhereUniqueWithoutMoviesInput | MovieGenreUpdateWithWhereUniqueWithoutMoviesInput[]
+    updateMany?: MovieGenreUpdateManyWithWhereWithoutMoviesInput | MovieGenreUpdateManyWithWhereWithoutMoviesInput[]
+    deleteMany?: MovieGenreScalarWhereInput | MovieGenreScalarWhereInput[]
   }
 
   export type MovieListUncheckedUpdateManyWithoutMoviesNestedInput = {
@@ -6611,6 +6889,58 @@ export namespace Prisma {
     not?: NestedIntFilter<$PrismaModel> | number
   }
 
+  export type NestedIntWithAggregatesFilter<$PrismaModel = never> = {
+    equals?: number | IntFieldRefInput<$PrismaModel>
+    in?: number[] | ListIntFieldRefInput<$PrismaModel>
+    notIn?: number[] | ListIntFieldRefInput<$PrismaModel>
+    lt?: number | IntFieldRefInput<$PrismaModel>
+    lte?: number | IntFieldRefInput<$PrismaModel>
+    gt?: number | IntFieldRefInput<$PrismaModel>
+    gte?: number | IntFieldRefInput<$PrismaModel>
+    not?: NestedIntWithAggregatesFilter<$PrismaModel> | number
+    _count?: NestedIntFilter<$PrismaModel>
+    _avg?: NestedFloatFilter<$PrismaModel>
+    _sum?: NestedIntFilter<$PrismaModel>
+    _min?: NestedIntFilter<$PrismaModel>
+    _max?: NestedIntFilter<$PrismaModel>
+  }
+
+  export type NestedFloatFilter<$PrismaModel = never> = {
+    equals?: number | FloatFieldRefInput<$PrismaModel>
+    in?: number[] | ListFloatFieldRefInput<$PrismaModel>
+    notIn?: number[] | ListFloatFieldRefInput<$PrismaModel>
+    lt?: number | FloatFieldRefInput<$PrismaModel>
+    lte?: number | FloatFieldRefInput<$PrismaModel>
+    gt?: number | FloatFieldRefInput<$PrismaModel>
+    gte?: number | FloatFieldRefInput<$PrismaModel>
+    not?: NestedFloatFilter<$PrismaModel> | number
+  }
+
+  export type NestedStringNullableFilter<$PrismaModel = never> = {
+    equals?: string | StringFieldRefInput<$PrismaModel> | null
+    in?: string[] | ListStringFieldRefInput<$PrismaModel> | null
+    notIn?: string[] | ListStringFieldRefInput<$PrismaModel> | null
+    lt?: string | StringFieldRefInput<$PrismaModel>
+    lte?: string | StringFieldRefInput<$PrismaModel>
+    gt?: string | StringFieldRefInput<$PrismaModel>
+    gte?: string | StringFieldRefInput<$PrismaModel>
+    contains?: string | StringFieldRefInput<$PrismaModel>
+    startsWith?: string | StringFieldRefInput<$PrismaModel>
+    endsWith?: string | StringFieldRefInput<$PrismaModel>
+    not?: NestedStringNullableFilter<$PrismaModel> | string | null
+  }
+
+  export type NestedDateTimeNullableFilter<$PrismaModel = never> = {
+    equals?: Date | string | DateTimeFieldRefInput<$PrismaModel> | null
+    in?: Date[] | string[] | ListDateTimeFieldRefInput<$PrismaModel> | null
+    notIn?: Date[] | string[] | ListDateTimeFieldRefInput<$PrismaModel> | null
+    lt?: Date | string | DateTimeFieldRefInput<$PrismaModel>
+    lte?: Date | string | DateTimeFieldRefInput<$PrismaModel>
+    gt?: Date | string | DateTimeFieldRefInput<$PrismaModel>
+    gte?: Date | string | DateTimeFieldRefInput<$PrismaModel>
+    not?: NestedDateTimeNullableFilter<$PrismaModel> | Date | string | null
+  }
+
   export type NestedIntNullableFilter<$PrismaModel = never> = {
     equals?: number | IntFieldRefInput<$PrismaModel> | null
     in?: number[] | ListIntFieldRefInput<$PrismaModel> | null
@@ -6620,6 +6950,48 @@ export namespace Prisma {
     gt?: number | IntFieldRefInput<$PrismaModel>
     gte?: number | IntFieldRefInput<$PrismaModel>
     not?: NestedIntNullableFilter<$PrismaModel> | number | null
+  }
+
+  export type NestedDateTimeFilter<$PrismaModel = never> = {
+    equals?: Date | string | DateTimeFieldRefInput<$PrismaModel>
+    in?: Date[] | string[] | ListDateTimeFieldRefInput<$PrismaModel>
+    notIn?: Date[] | string[] | ListDateTimeFieldRefInput<$PrismaModel>
+    lt?: Date | string | DateTimeFieldRefInput<$PrismaModel>
+    lte?: Date | string | DateTimeFieldRefInput<$PrismaModel>
+    gt?: Date | string | DateTimeFieldRefInput<$PrismaModel>
+    gte?: Date | string | DateTimeFieldRefInput<$PrismaModel>
+    not?: NestedDateTimeFilter<$PrismaModel> | Date | string
+  }
+
+  export type NestedStringNullableWithAggregatesFilter<$PrismaModel = never> = {
+    equals?: string | StringFieldRefInput<$PrismaModel> | null
+    in?: string[] | ListStringFieldRefInput<$PrismaModel> | null
+    notIn?: string[] | ListStringFieldRefInput<$PrismaModel> | null
+    lt?: string | StringFieldRefInput<$PrismaModel>
+    lte?: string | StringFieldRefInput<$PrismaModel>
+    gt?: string | StringFieldRefInput<$PrismaModel>
+    gte?: string | StringFieldRefInput<$PrismaModel>
+    contains?: string | StringFieldRefInput<$PrismaModel>
+    startsWith?: string | StringFieldRefInput<$PrismaModel>
+    endsWith?: string | StringFieldRefInput<$PrismaModel>
+    not?: NestedStringNullableWithAggregatesFilter<$PrismaModel> | string | null
+    _count?: NestedIntNullableFilter<$PrismaModel>
+    _min?: NestedStringNullableFilter<$PrismaModel>
+    _max?: NestedStringNullableFilter<$PrismaModel>
+  }
+
+  export type NestedDateTimeNullableWithAggregatesFilter<$PrismaModel = never> = {
+    equals?: Date | string | DateTimeFieldRefInput<$PrismaModel> | null
+    in?: Date[] | string[] | ListDateTimeFieldRefInput<$PrismaModel> | null
+    notIn?: Date[] | string[] | ListDateTimeFieldRefInput<$PrismaModel> | null
+    lt?: Date | string | DateTimeFieldRefInput<$PrismaModel>
+    lte?: Date | string | DateTimeFieldRefInput<$PrismaModel>
+    gt?: Date | string | DateTimeFieldRefInput<$PrismaModel>
+    gte?: Date | string | DateTimeFieldRefInput<$PrismaModel>
+    not?: NestedDateTimeNullableWithAggregatesFilter<$PrismaModel> | Date | string | null
+    _count?: NestedIntNullableFilter<$PrismaModel>
+    _min?: NestedDateTimeNullableFilter<$PrismaModel>
+    _max?: NestedDateTimeNullableFilter<$PrismaModel>
   }
 
   export type NestedIntNullableWithAggregatesFilter<$PrismaModel = never> = {
@@ -6649,6 +7021,20 @@ export namespace Prisma {
     not?: NestedFloatNullableFilter<$PrismaModel> | number | null
   }
 
+  export type NestedDateTimeWithAggregatesFilter<$PrismaModel = never> = {
+    equals?: Date | string | DateTimeFieldRefInput<$PrismaModel>
+    in?: Date[] | string[] | ListDateTimeFieldRefInput<$PrismaModel>
+    notIn?: Date[] | string[] | ListDateTimeFieldRefInput<$PrismaModel>
+    lt?: Date | string | DateTimeFieldRefInput<$PrismaModel>
+    lte?: Date | string | DateTimeFieldRefInput<$PrismaModel>
+    gt?: Date | string | DateTimeFieldRefInput<$PrismaModel>
+    gte?: Date | string | DateTimeFieldRefInput<$PrismaModel>
+    not?: NestedDateTimeWithAggregatesFilter<$PrismaModel> | Date | string
+    _count?: NestedIntFilter<$PrismaModel>
+    _min?: NestedDateTimeFilter<$PrismaModel>
+    _max?: NestedDateTimeFilter<$PrismaModel>
+  }
+
   export type NestedBoolFilter<$PrismaModel = never> = {
     equals?: boolean | BooleanFieldRefInput<$PrismaModel>
     not?: NestedBoolFilter<$PrismaModel> | boolean
@@ -6665,7 +7051,7 @@ export namespace Prisma {
   export type MovieListCreateWithoutUserInput = {
     id?: string
     name: string
-    description: string
+    description?: string | null
     public?: boolean
     movies?: MovieCreateNestedManyWithoutListsInput
   }
@@ -6673,7 +7059,7 @@ export namespace Prisma {
   export type MovieListUncheckedCreateWithoutUserInput = {
     id?: string
     name: string
-    description: string
+    description?: string | null
     public?: boolean
     movies?: MovieUncheckedCreateNestedManyWithoutListsInput
   }
@@ -6710,46 +7096,54 @@ export namespace Prisma {
     NOT?: MovieListScalarWhereInput | MovieListScalarWhereInput[]
     id?: StringFilter<"MovieList"> | string
     name?: StringFilter<"MovieList"> | string
-    description?: StringFilter<"MovieList"> | string
+    description?: StringNullableFilter<"MovieList"> | string | null
     public?: BoolFilter<"MovieList"> | boolean
     userId?: StringFilter<"MovieList"> | string
   }
 
-  export type MovieCreateWithoutGendersInput = {
+  export type MovieCreateWithoutGenresInput = {
     id?: string
+    tmdbId: number
     name: string
+    sinopsis?: string | null
+    releaseDate?: Date | string | null
+    posterUrl?: string | null
     ageRestriction?: number | null
-    sinopsis: string
+    createdAt?: Date | string
     lists?: MovieListCreateNestedManyWithoutMoviesInput
   }
 
-  export type MovieUncheckedCreateWithoutGendersInput = {
+  export type MovieUncheckedCreateWithoutGenresInput = {
     id?: string
+    tmdbId: number
     name: string
+    sinopsis?: string | null
+    releaseDate?: Date | string | null
+    posterUrl?: string | null
     ageRestriction?: number | null
-    sinopsis: string
+    createdAt?: Date | string
     lists?: MovieListUncheckedCreateNestedManyWithoutMoviesInput
   }
 
-  export type MovieCreateOrConnectWithoutGendersInput = {
+  export type MovieCreateOrConnectWithoutGenresInput = {
     where: MovieWhereUniqueInput
-    create: XOR<MovieCreateWithoutGendersInput, MovieUncheckedCreateWithoutGendersInput>
+    create: XOR<MovieCreateWithoutGenresInput, MovieUncheckedCreateWithoutGenresInput>
   }
 
-  export type MovieUpsertWithWhereUniqueWithoutGendersInput = {
+  export type MovieUpsertWithWhereUniqueWithoutGenresInput = {
     where: MovieWhereUniqueInput
-    update: XOR<MovieUpdateWithoutGendersInput, MovieUncheckedUpdateWithoutGendersInput>
-    create: XOR<MovieCreateWithoutGendersInput, MovieUncheckedCreateWithoutGendersInput>
+    update: XOR<MovieUpdateWithoutGenresInput, MovieUncheckedUpdateWithoutGenresInput>
+    create: XOR<MovieCreateWithoutGenresInput, MovieUncheckedCreateWithoutGenresInput>
   }
 
-  export type MovieUpdateWithWhereUniqueWithoutGendersInput = {
+  export type MovieUpdateWithWhereUniqueWithoutGenresInput = {
     where: MovieWhereUniqueInput
-    data: XOR<MovieUpdateWithoutGendersInput, MovieUncheckedUpdateWithoutGendersInput>
+    data: XOR<MovieUpdateWithoutGenresInput, MovieUncheckedUpdateWithoutGenresInput>
   }
 
-  export type MovieUpdateManyWithWhereWithoutGendersInput = {
+  export type MovieUpdateManyWithWhereWithoutGenresInput = {
     where: MovieScalarWhereInput
-    data: XOR<MovieUpdateManyMutationInput, MovieUncheckedUpdateManyWithoutGendersInput>
+    data: XOR<MovieUpdateManyMutationInput, MovieUncheckedUpdateManyWithoutGenresInput>
   }
 
   export type MovieScalarWhereInput = {
@@ -6757,32 +7151,33 @@ export namespace Prisma {
     OR?: MovieScalarWhereInput[]
     NOT?: MovieScalarWhereInput | MovieScalarWhereInput[]
     id?: StringFilter<"Movie"> | string
+    tmdbId?: IntFilter<"Movie"> | number
     name?: StringFilter<"Movie"> | string
+    sinopsis?: StringNullableFilter<"Movie"> | string | null
+    releaseDate?: DateTimeNullableFilter<"Movie"> | Date | string | null
+    posterUrl?: StringNullableFilter<"Movie"> | string | null
     ageRestriction?: IntNullableFilter<"Movie"> | number | null
-    sinopsis?: StringFilter<"Movie"> | string
+    createdAt?: DateTimeFilter<"Movie"> | Date | string
   }
 
-  export type MovieGenderCreateWithoutMoviesInput = {
-    id?: string
+  export type MovieGenreCreateWithoutMoviesInput = {
     name: string
-    description: string
   }
 
-  export type MovieGenderUncheckedCreateWithoutMoviesInput = {
-    id?: string
+  export type MovieGenreUncheckedCreateWithoutMoviesInput = {
+    id?: number
     name: string
-    description: string
   }
 
-  export type MovieGenderCreateOrConnectWithoutMoviesInput = {
-    where: MovieGenderWhereUniqueInput
-    create: XOR<MovieGenderCreateWithoutMoviesInput, MovieGenderUncheckedCreateWithoutMoviesInput>
+  export type MovieGenreCreateOrConnectWithoutMoviesInput = {
+    where: MovieGenreWhereUniqueInput
+    create: XOR<MovieGenreCreateWithoutMoviesInput, MovieGenreUncheckedCreateWithoutMoviesInput>
   }
 
   export type MovieListCreateWithoutMoviesInput = {
     id?: string
     name: string
-    description: string
+    description?: string | null
     public?: boolean
     User: UserCreateNestedOneWithoutListsInput
   }
@@ -6790,7 +7185,7 @@ export namespace Prisma {
   export type MovieListUncheckedCreateWithoutMoviesInput = {
     id?: string
     name: string
-    description: string
+    description?: string | null
     public?: boolean
     userId: string
   }
@@ -6800,29 +7195,28 @@ export namespace Prisma {
     create: XOR<MovieListCreateWithoutMoviesInput, MovieListUncheckedCreateWithoutMoviesInput>
   }
 
-  export type MovieGenderUpsertWithWhereUniqueWithoutMoviesInput = {
-    where: MovieGenderWhereUniqueInput
-    update: XOR<MovieGenderUpdateWithoutMoviesInput, MovieGenderUncheckedUpdateWithoutMoviesInput>
-    create: XOR<MovieGenderCreateWithoutMoviesInput, MovieGenderUncheckedCreateWithoutMoviesInput>
+  export type MovieGenreUpsertWithWhereUniqueWithoutMoviesInput = {
+    where: MovieGenreWhereUniqueInput
+    update: XOR<MovieGenreUpdateWithoutMoviesInput, MovieGenreUncheckedUpdateWithoutMoviesInput>
+    create: XOR<MovieGenreCreateWithoutMoviesInput, MovieGenreUncheckedCreateWithoutMoviesInput>
   }
 
-  export type MovieGenderUpdateWithWhereUniqueWithoutMoviesInput = {
-    where: MovieGenderWhereUniqueInput
-    data: XOR<MovieGenderUpdateWithoutMoviesInput, MovieGenderUncheckedUpdateWithoutMoviesInput>
+  export type MovieGenreUpdateWithWhereUniqueWithoutMoviesInput = {
+    where: MovieGenreWhereUniqueInput
+    data: XOR<MovieGenreUpdateWithoutMoviesInput, MovieGenreUncheckedUpdateWithoutMoviesInput>
   }
 
-  export type MovieGenderUpdateManyWithWhereWithoutMoviesInput = {
-    where: MovieGenderScalarWhereInput
-    data: XOR<MovieGenderUpdateManyMutationInput, MovieGenderUncheckedUpdateManyWithoutMoviesInput>
+  export type MovieGenreUpdateManyWithWhereWithoutMoviesInput = {
+    where: MovieGenreScalarWhereInput
+    data: XOR<MovieGenreUpdateManyMutationInput, MovieGenreUncheckedUpdateManyWithoutMoviesInput>
   }
 
-  export type MovieGenderScalarWhereInput = {
-    AND?: MovieGenderScalarWhereInput | MovieGenderScalarWhereInput[]
-    OR?: MovieGenderScalarWhereInput[]
-    NOT?: MovieGenderScalarWhereInput | MovieGenderScalarWhereInput[]
-    id?: StringFilter<"MovieGender"> | string
-    name?: StringFilter<"MovieGender"> | string
-    description?: StringFilter<"MovieGender"> | string
+  export type MovieGenreScalarWhereInput = {
+    AND?: MovieGenreScalarWhereInput | MovieGenreScalarWhereInput[]
+    OR?: MovieGenreScalarWhereInput[]
+    NOT?: MovieGenreScalarWhereInput | MovieGenreScalarWhereInput[]
+    id?: IntFilter<"MovieGenre"> | number
+    name?: StringFilter<"MovieGenre"> | string
   }
 
   export type MovieListUpsertWithWhereUniqueWithoutMoviesInput = {
@@ -6843,18 +7237,26 @@ export namespace Prisma {
 
   export type MovieCreateWithoutListsInput = {
     id?: string
+    tmdbId: number
     name: string
+    sinopsis?: string | null
+    releaseDate?: Date | string | null
+    posterUrl?: string | null
     ageRestriction?: number | null
-    sinopsis: string
-    genders?: MovieGenderCreateNestedManyWithoutMoviesInput
+    createdAt?: Date | string
+    genres?: MovieGenreCreateNestedManyWithoutMoviesInput
   }
 
   export type MovieUncheckedCreateWithoutListsInput = {
     id?: string
+    tmdbId: number
     name: string
+    sinopsis?: string | null
+    releaseDate?: Date | string | null
+    posterUrl?: string | null
     ageRestriction?: number | null
-    sinopsis: string
-    genders?: MovieGenderUncheckedCreateNestedManyWithoutMoviesInput
+    createdAt?: Date | string
+    genres?: MovieGenreUncheckedCreateNestedManyWithoutMoviesInput
   }
 
   export type MovieCreateOrConnectWithoutListsInput = {
@@ -6925,14 +7327,14 @@ export namespace Prisma {
   export type MovieListCreateManyUserInput = {
     id?: string
     name: string
-    description: string
+    description?: string | null
     public?: boolean
   }
 
   export type MovieListUpdateWithoutUserInput = {
     id?: StringFieldUpdateOperationsInput | string
     name?: StringFieldUpdateOperationsInput | string
-    description?: StringFieldUpdateOperationsInput | string
+    description?: NullableStringFieldUpdateOperationsInput | string | null
     public?: BoolFieldUpdateOperationsInput | boolean
     movies?: MovieUpdateManyWithoutListsNestedInput
   }
@@ -6940,7 +7342,7 @@ export namespace Prisma {
   export type MovieListUncheckedUpdateWithoutUserInput = {
     id?: StringFieldUpdateOperationsInput | string
     name?: StringFieldUpdateOperationsInput | string
-    description?: StringFieldUpdateOperationsInput | string
+    description?: NullableStringFieldUpdateOperationsInput | string | null
     public?: BoolFieldUpdateOperationsInput | boolean
     movies?: MovieUncheckedUpdateManyWithoutListsNestedInput
   }
@@ -6948,55 +7350,63 @@ export namespace Prisma {
   export type MovieListUncheckedUpdateManyWithoutUserInput = {
     id?: StringFieldUpdateOperationsInput | string
     name?: StringFieldUpdateOperationsInput | string
-    description?: StringFieldUpdateOperationsInput | string
+    description?: NullableStringFieldUpdateOperationsInput | string | null
     public?: BoolFieldUpdateOperationsInput | boolean
   }
 
-  export type MovieUpdateWithoutGendersInput = {
+  export type MovieUpdateWithoutGenresInput = {
     id?: StringFieldUpdateOperationsInput | string
+    tmdbId?: IntFieldUpdateOperationsInput | number
     name?: StringFieldUpdateOperationsInput | string
+    sinopsis?: NullableStringFieldUpdateOperationsInput | string | null
+    releaseDate?: NullableDateTimeFieldUpdateOperationsInput | Date | string | null
+    posterUrl?: NullableStringFieldUpdateOperationsInput | string | null
     ageRestriction?: NullableIntFieldUpdateOperationsInput | number | null
-    sinopsis?: StringFieldUpdateOperationsInput | string
+    createdAt?: DateTimeFieldUpdateOperationsInput | Date | string
     lists?: MovieListUpdateManyWithoutMoviesNestedInput
   }
 
-  export type MovieUncheckedUpdateWithoutGendersInput = {
+  export type MovieUncheckedUpdateWithoutGenresInput = {
     id?: StringFieldUpdateOperationsInput | string
+    tmdbId?: IntFieldUpdateOperationsInput | number
     name?: StringFieldUpdateOperationsInput | string
+    sinopsis?: NullableStringFieldUpdateOperationsInput | string | null
+    releaseDate?: NullableDateTimeFieldUpdateOperationsInput | Date | string | null
+    posterUrl?: NullableStringFieldUpdateOperationsInput | string | null
     ageRestriction?: NullableIntFieldUpdateOperationsInput | number | null
-    sinopsis?: StringFieldUpdateOperationsInput | string
+    createdAt?: DateTimeFieldUpdateOperationsInput | Date | string
     lists?: MovieListUncheckedUpdateManyWithoutMoviesNestedInput
   }
 
-  export type MovieUncheckedUpdateManyWithoutGendersInput = {
+  export type MovieUncheckedUpdateManyWithoutGenresInput = {
     id?: StringFieldUpdateOperationsInput | string
+    tmdbId?: IntFieldUpdateOperationsInput | number
     name?: StringFieldUpdateOperationsInput | string
+    sinopsis?: NullableStringFieldUpdateOperationsInput | string | null
+    releaseDate?: NullableDateTimeFieldUpdateOperationsInput | Date | string | null
+    posterUrl?: NullableStringFieldUpdateOperationsInput | string | null
     ageRestriction?: NullableIntFieldUpdateOperationsInput | number | null
-    sinopsis?: StringFieldUpdateOperationsInput | string
+    createdAt?: DateTimeFieldUpdateOperationsInput | Date | string
   }
 
-  export type MovieGenderUpdateWithoutMoviesInput = {
-    id?: StringFieldUpdateOperationsInput | string
+  export type MovieGenreUpdateWithoutMoviesInput = {
     name?: StringFieldUpdateOperationsInput | string
-    description?: StringFieldUpdateOperationsInput | string
   }
 
-  export type MovieGenderUncheckedUpdateWithoutMoviesInput = {
-    id?: StringFieldUpdateOperationsInput | string
+  export type MovieGenreUncheckedUpdateWithoutMoviesInput = {
+    id?: IntFieldUpdateOperationsInput | number
     name?: StringFieldUpdateOperationsInput | string
-    description?: StringFieldUpdateOperationsInput | string
   }
 
-  export type MovieGenderUncheckedUpdateManyWithoutMoviesInput = {
-    id?: StringFieldUpdateOperationsInput | string
+  export type MovieGenreUncheckedUpdateManyWithoutMoviesInput = {
+    id?: IntFieldUpdateOperationsInput | number
     name?: StringFieldUpdateOperationsInput | string
-    description?: StringFieldUpdateOperationsInput | string
   }
 
   export type MovieListUpdateWithoutMoviesInput = {
     id?: StringFieldUpdateOperationsInput | string
     name?: StringFieldUpdateOperationsInput | string
-    description?: StringFieldUpdateOperationsInput | string
+    description?: NullableStringFieldUpdateOperationsInput | string | null
     public?: BoolFieldUpdateOperationsInput | boolean
     User?: UserUpdateOneRequiredWithoutListsNestedInput
   }
@@ -7004,7 +7414,7 @@ export namespace Prisma {
   export type MovieListUncheckedUpdateWithoutMoviesInput = {
     id?: StringFieldUpdateOperationsInput | string
     name?: StringFieldUpdateOperationsInput | string
-    description?: StringFieldUpdateOperationsInput | string
+    description?: NullableStringFieldUpdateOperationsInput | string | null
     public?: BoolFieldUpdateOperationsInput | boolean
     userId?: StringFieldUpdateOperationsInput | string
   }
@@ -7012,32 +7422,44 @@ export namespace Prisma {
   export type MovieListUncheckedUpdateManyWithoutMoviesInput = {
     id?: StringFieldUpdateOperationsInput | string
     name?: StringFieldUpdateOperationsInput | string
-    description?: StringFieldUpdateOperationsInput | string
+    description?: NullableStringFieldUpdateOperationsInput | string | null
     public?: BoolFieldUpdateOperationsInput | boolean
     userId?: StringFieldUpdateOperationsInput | string
   }
 
   export type MovieUpdateWithoutListsInput = {
     id?: StringFieldUpdateOperationsInput | string
+    tmdbId?: IntFieldUpdateOperationsInput | number
     name?: StringFieldUpdateOperationsInput | string
+    sinopsis?: NullableStringFieldUpdateOperationsInput | string | null
+    releaseDate?: NullableDateTimeFieldUpdateOperationsInput | Date | string | null
+    posterUrl?: NullableStringFieldUpdateOperationsInput | string | null
     ageRestriction?: NullableIntFieldUpdateOperationsInput | number | null
-    sinopsis?: StringFieldUpdateOperationsInput | string
-    genders?: MovieGenderUpdateManyWithoutMoviesNestedInput
+    createdAt?: DateTimeFieldUpdateOperationsInput | Date | string
+    genres?: MovieGenreUpdateManyWithoutMoviesNestedInput
   }
 
   export type MovieUncheckedUpdateWithoutListsInput = {
     id?: StringFieldUpdateOperationsInput | string
+    tmdbId?: IntFieldUpdateOperationsInput | number
     name?: StringFieldUpdateOperationsInput | string
+    sinopsis?: NullableStringFieldUpdateOperationsInput | string | null
+    releaseDate?: NullableDateTimeFieldUpdateOperationsInput | Date | string | null
+    posterUrl?: NullableStringFieldUpdateOperationsInput | string | null
     ageRestriction?: NullableIntFieldUpdateOperationsInput | number | null
-    sinopsis?: StringFieldUpdateOperationsInput | string
-    genders?: MovieGenderUncheckedUpdateManyWithoutMoviesNestedInput
+    createdAt?: DateTimeFieldUpdateOperationsInput | Date | string
+    genres?: MovieGenreUncheckedUpdateManyWithoutMoviesNestedInput
   }
 
   export type MovieUncheckedUpdateManyWithoutListsInput = {
     id?: StringFieldUpdateOperationsInput | string
+    tmdbId?: IntFieldUpdateOperationsInput | number
     name?: StringFieldUpdateOperationsInput | string
+    sinopsis?: NullableStringFieldUpdateOperationsInput | string | null
+    releaseDate?: NullableDateTimeFieldUpdateOperationsInput | Date | string | null
+    posterUrl?: NullableStringFieldUpdateOperationsInput | string | null
     ageRestriction?: NullableIntFieldUpdateOperationsInput | number | null
-    sinopsis?: StringFieldUpdateOperationsInput | string
+    createdAt?: DateTimeFieldUpdateOperationsInput | Date | string
   }
 
 

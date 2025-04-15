@@ -24,6 +24,8 @@
   "homepage": "https://github.com/youth-fs-3519/backend-movies#readme",
   "dependencies": {
     "@prisma/client": "^6.6.0",
+    "axios": "^1.8.4",
+    "dotenv": "^16.5.0",
     "express": "^5.1.0"
   },
   "devDependencies": {

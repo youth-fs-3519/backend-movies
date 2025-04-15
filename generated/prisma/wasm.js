@@ -124,17 +124,20 @@ exports.Prisma.UserScalarFieldEnum = {
   password: 'password'
 };
 
-exports.Prisma.MovieGenderScalarFieldEnum = {
+exports.Prisma.MovieGenreScalarFieldEnum = {
   id: 'id',
-  name: 'name',
-  description: 'description'
+  name: 'name'
 };
 
 exports.Prisma.MovieScalarFieldEnum = {
   id: 'id',
+  tmdbId: 'tmdbId',
   name: 'name',
+  sinopsis: 'sinopsis',
+  releaseDate: 'releaseDate',
+  posterUrl: 'posterUrl',
   ageRestriction: 'ageRestriction',
-  sinopsis: 'sinopsis'
+  createdAt: 'createdAt'
 };
 
 exports.Prisma.MovieListScalarFieldEnum = {
@@ -163,7 +166,7 @@ exports.Prisma.NullsOrder = {
 
 exports.Prisma.ModelName = {
   User: 'User',
-  MovieGender: 'MovieGender',
+  MovieGenre: 'MovieGenre',
   Movie: 'Movie',
   MovieList: 'MovieList'
 };

@@ -23,22 +23,25 @@ model User {
   lists MovieList[]
 }
 
-model MovieGender {
-  id          String @id @default(uuid())
-  name        String @unique
-  description String
+model MovieGenre {
+  id   Int    @id @default(autoincrement())
+  name String @unique
 
   movies Movie[]
 }
 
 model Movie {
-  id             String @id @default(uuid())
+  id             String    @id @default(uuid())
+  tmdbId         Int       @unique
   name           String
+  sinopsis       String?
+  releaseDate    DateTime?
+  posterUrl      String?
   ageRestriction Int?
-  sinopsis       String
+  createdAt      DateTime  @default(now())
 
-  genders MovieGender[]
-  lists   MovieList[]
+  genres MovieGenre[]
+  lists  MovieList[]
 }
 
 model MovieList {
