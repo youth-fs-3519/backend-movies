@@ -3585,7 +3585,7 @@ export namespace Prisma {
 
   export type MovieGroupByOutputType = {
     id: string
-    tmdbId: number
+    tmdbId: number | null
     name: string
     sinopsis: string | null
     releaseDate: Date | null
@@ -3677,7 +3677,7 @@ export namespace Prisma {
     }
     scalars: $Extensions.GetPayloadResult<{
       id: string
-      tmdbId: number
+      tmdbId: number | null
       name: string
       sinopsis: string | null
       releaseDate: Date | null
@@ -5908,7 +5908,7 @@ export namespace Prisma {
     OR?: MovieWhereInput[]
     NOT?: MovieWhereInput | MovieWhereInput[]
     id?: StringFilter<"Movie"> | string
-    tmdbId?: IntFilter<"Movie"> | number
+    tmdbId?: IntNullableFilter<"Movie"> | number | null
     name?: StringFilter<"Movie"> | string
     sinopsis?: StringNullableFilter<"Movie"> | string | null
     releaseDate?: DateTimeNullableFilter<"Movie"> | Date | string | null
@@ -5921,7 +5921,7 @@ export namespace Prisma {
 
   export type MovieOrderByWithRelationInput = {
     id?: SortOrder
-    tmdbId?: SortOrder
+    tmdbId?: SortOrderInput | SortOrder
     name?: SortOrder
     sinopsis?: SortOrderInput | SortOrder
     releaseDate?: SortOrderInput | SortOrder
@@ -5950,7 +5950,7 @@ export namespace Prisma {
 
   export type MovieOrderByWithAggregationInput = {
     id?: SortOrder
-    tmdbId?: SortOrder
+    tmdbId?: SortOrderInput | SortOrder
     name?: SortOrder
     sinopsis?: SortOrderInput | SortOrder
     releaseDate?: SortOrderInput | SortOrder
@@ -5969,7 +5969,7 @@ export namespace Prisma {
     OR?: MovieScalarWhereWithAggregatesInput[]
     NOT?: MovieScalarWhereWithAggregatesInput | MovieScalarWhereWithAggregatesInput[]
     id?: StringWithAggregatesFilter<"Movie"> | string
-    tmdbId?: IntWithAggregatesFilter<"Movie"> | number
+    tmdbId?: IntNullableWithAggregatesFilter<"Movie"> | number | null
     name?: StringWithAggregatesFilter<"Movie"> | string
     sinopsis?: StringNullableWithAggregatesFilter<"Movie"> | string | null
     releaseDate?: DateTimeNullableWithAggregatesFilter<"Movie"> | Date | string | null
@@ -6127,7 +6127,7 @@ export namespace Prisma {
 
   export type MovieCreateInput = {
     id?: string
-    tmdbId: number
+    tmdbId?: number | null
     name: string
     sinopsis?: string | null
     releaseDate?: Date | string | null
@@ -6140,7 +6140,7 @@ export namespace Prisma {
 
   export type MovieUncheckedCreateInput = {
     id?: string
-    tmdbId: number
+    tmdbId?: number | null
     name: string
     sinopsis?: string | null
     releaseDate?: Date | string | null
@@ -6153,7 +6153,7 @@ export namespace Prisma {
 
   export type MovieUpdateInput = {
     id?: StringFieldUpdateOperationsInput | string
-    tmdbId?: IntFieldUpdateOperationsInput | number
+    tmdbId?: NullableIntFieldUpdateOperationsInput | number | null
     name?: StringFieldUpdateOperationsInput | string
     sinopsis?: NullableStringFieldUpdateOperationsInput | string | null
     releaseDate?: NullableDateTimeFieldUpdateOperationsInput | Date | string | null
@@ -6166,7 +6166,7 @@ export namespace Prisma {
 
   export type MovieUncheckedUpdateInput = {
     id?: StringFieldUpdateOperationsInput | string
-    tmdbId?: IntFieldUpdateOperationsInput | number
+    tmdbId?: NullableIntFieldUpdateOperationsInput | number | null
     name?: StringFieldUpdateOperationsInput | string
     sinopsis?: NullableStringFieldUpdateOperationsInput | string | null
     releaseDate?: NullableDateTimeFieldUpdateOperationsInput | Date | string | null
@@ -6179,7 +6179,7 @@ export namespace Prisma {
 
   export type MovieCreateManyInput = {
     id?: string
-    tmdbId: number
+    tmdbId?: number | null
     name: string
     sinopsis?: string | null
     releaseDate?: Date | string | null
@@ -6190,7 +6190,7 @@ export namespace Prisma {
 
   export type MovieUpdateManyMutationInput = {
     id?: StringFieldUpdateOperationsInput | string
-    tmdbId?: IntFieldUpdateOperationsInput | number
+    tmdbId?: NullableIntFieldUpdateOperationsInput | number | null
     name?: StringFieldUpdateOperationsInput | string
     sinopsis?: NullableStringFieldUpdateOperationsInput | string | null
     releaseDate?: NullableDateTimeFieldUpdateOperationsInput | Date | string | null
@@ -6201,7 +6201,7 @@ export namespace Prisma {
 
   export type MovieUncheckedUpdateManyInput = {
     id?: StringFieldUpdateOperationsInput | string
-    tmdbId?: IntFieldUpdateOperationsInput | number
+    tmdbId?: NullableIntFieldUpdateOperationsInput | number | null
     name?: StringFieldUpdateOperationsInput | string
     sinopsis?: NullableStringFieldUpdateOperationsInput | string | null
     releaseDate?: NullableDateTimeFieldUpdateOperationsInput | Date | string | null
@@ -6393,6 +6393,17 @@ export namespace Prisma {
     _max?: NestedIntFilter<$PrismaModel>
   }
 
+  export type IntNullableFilter<$PrismaModel = never> = {
+    equals?: number | IntFieldRefInput<$PrismaModel> | null
+    in?: number[] | ListIntFieldRefInput<$PrismaModel> | null
+    notIn?: number[] | ListIntFieldRefInput<$PrismaModel> | null
+    lt?: number | IntFieldRefInput<$PrismaModel>
+    lte?: number | IntFieldRefInput<$PrismaModel>
+    gt?: number | IntFieldRefInput<$PrismaModel>
+    gte?: number | IntFieldRefInput<$PrismaModel>
+    not?: NestedIntNullableFilter<$PrismaModel> | number | null
+  }
+
   export type StringNullableFilter<$PrismaModel = never> = {
     equals?: string | StringFieldRefInput<$PrismaModel> | null
     in?: string[] | ListStringFieldRefInput<$PrismaModel> | null
@@ -6417,17 +6428,6 @@ export namespace Prisma {
     gt?: Date | string | DateTimeFieldRefInput<$PrismaModel>
     gte?: Date | string | DateTimeFieldRefInput<$PrismaModel>
     not?: NestedDateTimeNullableFilter<$PrismaModel> | Date | string | null
-  }
-
-  export type IntNullableFilter<$PrismaModel = never> = {
-    equals?: number | IntFieldRefInput<$PrismaModel> | null
-    in?: number[] | ListIntFieldRefInput<$PrismaModel> | null
-    notIn?: number[] | ListIntFieldRefInput<$PrismaModel> | null
-    lt?: number | IntFieldRefInput<$PrismaModel>
-    lte?: number | IntFieldRefInput<$PrismaModel>
-    gt?: number | IntFieldRefInput<$PrismaModel>
-    gte?: number | IntFieldRefInput<$PrismaModel>
-    not?: NestedIntNullableFilter<$PrismaModel> | number | null
   }
 
   export type DateTimeFilter<$PrismaModel = never> = {
@@ -6499,6 +6499,22 @@ export namespace Prisma {
     ageRestriction?: SortOrder
   }
 
+  export type IntNullableWithAggregatesFilter<$PrismaModel = never> = {
+    equals?: number | IntFieldRefInput<$PrismaModel> | null
+    in?: number[] | ListIntFieldRefInput<$PrismaModel> | null
+    notIn?: number[] | ListIntFieldRefInput<$PrismaModel> | null
+    lt?: number | IntFieldRefInput<$PrismaModel>
+    lte?: number | IntFieldRefInput<$PrismaModel>
+    gt?: number | IntFieldRefInput<$PrismaModel>
+    gte?: number | IntFieldRefInput<$PrismaModel>
+    not?: NestedIntNullableWithAggregatesFilter<$PrismaModel> | number | null
+    _count?: NestedIntNullableFilter<$PrismaModel>
+    _avg?: NestedFloatNullableFilter<$PrismaModel>
+    _sum?: NestedIntNullableFilter<$PrismaModel>
+    _min?: NestedIntNullableFilter<$PrismaModel>
+    _max?: NestedIntNullableFilter<$PrismaModel>
+  }
+
   export type StringNullableWithAggregatesFilter<$PrismaModel = never> = {
     equals?: string | StringFieldRefInput<$PrismaModel> | null
     in?: string[] | ListStringFieldRefInput<$PrismaModel> | null
@@ -6529,22 +6545,6 @@ export namespace Prisma {
     _count?: NestedIntNullableFilter<$PrismaModel>
     _min?: NestedDateTimeNullableFilter<$PrismaModel>
     _max?: NestedDateTimeNullableFilter<$PrismaModel>
-  }
-
-  export type IntNullableWithAggregatesFilter<$PrismaModel = never> = {
-    equals?: number | IntFieldRefInput<$PrismaModel> | null
-    in?: number[] | ListIntFieldRefInput<$PrismaModel> | null
-    notIn?: number[] | ListIntFieldRefInput<$PrismaModel> | null
-    lt?: number | IntFieldRefInput<$PrismaModel>
-    lte?: number | IntFieldRefInput<$PrismaModel>
-    gt?: number | IntFieldRefInput<$PrismaModel>
-    gte?: number | IntFieldRefInput<$PrismaModel>
-    not?: NestedIntNullableWithAggregatesFilter<$PrismaModel> | number | null
-    _count?: NestedIntNullableFilter<$PrismaModel>
-    _avg?: NestedFloatNullableFilter<$PrismaModel>
-    _sum?: NestedIntNullableFilter<$PrismaModel>
-    _min?: NestedIntNullableFilter<$PrismaModel>
-    _max?: NestedIntNullableFilter<$PrismaModel>
   }
 
   export type DateTimeWithAggregatesFilter<$PrismaModel = never> = {
@@ -6719,20 +6719,20 @@ export namespace Prisma {
     connect?: MovieListWhereUniqueInput | MovieListWhereUniqueInput[]
   }
 
-  export type NullableStringFieldUpdateOperationsInput = {
-    set?: string | null
-  }
-
-  export type NullableDateTimeFieldUpdateOperationsInput = {
-    set?: Date | string | null
-  }
-
   export type NullableIntFieldUpdateOperationsInput = {
     set?: number | null
     increment?: number
     decrement?: number
     multiply?: number
     divide?: number
+  }
+
+  export type NullableStringFieldUpdateOperationsInput = {
+    set?: string | null
+  }
+
+  export type NullableDateTimeFieldUpdateOperationsInput = {
+    set?: Date | string | null
   }
 
   export type DateTimeFieldUpdateOperationsInput = {
@@ -6916,6 +6916,17 @@ export namespace Prisma {
     not?: NestedFloatFilter<$PrismaModel> | number
   }
 
+  export type NestedIntNullableFilter<$PrismaModel = never> = {
+    equals?: number | IntFieldRefInput<$PrismaModel> | null
+    in?: number[] | ListIntFieldRefInput<$PrismaModel> | null
+    notIn?: number[] | ListIntFieldRefInput<$PrismaModel> | null
+    lt?: number | IntFieldRefInput<$PrismaModel>
+    lte?: number | IntFieldRefInput<$PrismaModel>
+    gt?: number | IntFieldRefInput<$PrismaModel>
+    gte?: number | IntFieldRefInput<$PrismaModel>
+    not?: NestedIntNullableFilter<$PrismaModel> | number | null
+  }
+
   export type NestedStringNullableFilter<$PrismaModel = never> = {
     equals?: string | StringFieldRefInput<$PrismaModel> | null
     in?: string[] | ListStringFieldRefInput<$PrismaModel> | null
@@ -6941,17 +6952,6 @@ export namespace Prisma {
     not?: NestedDateTimeNullableFilter<$PrismaModel> | Date | string | null
   }
 
-  export type NestedIntNullableFilter<$PrismaModel = never> = {
-    equals?: number | IntFieldRefInput<$PrismaModel> | null
-    in?: number[] | ListIntFieldRefInput<$PrismaModel> | null
-    notIn?: number[] | ListIntFieldRefInput<$PrismaModel> | null
-    lt?: number | IntFieldRefInput<$PrismaModel>
-    lte?: number | IntFieldRefInput<$PrismaModel>
-    gt?: number | IntFieldRefInput<$PrismaModel>
-    gte?: number | IntFieldRefInput<$PrismaModel>
-    not?: NestedIntNullableFilter<$PrismaModel> | number | null
-  }
-
   export type NestedDateTimeFilter<$PrismaModel = never> = {
     equals?: Date | string | DateTimeFieldRefInput<$PrismaModel>
     in?: Date[] | string[] | ListDateTimeFieldRefInput<$PrismaModel>
@@ -6961,6 +6961,33 @@ export namespace Prisma {
     gt?: Date | string | DateTimeFieldRefInput<$PrismaModel>
     gte?: Date | string | DateTimeFieldRefInput<$PrismaModel>
     not?: NestedDateTimeFilter<$PrismaModel> | Date | string
+  }
+
+  export type NestedIntNullableWithAggregatesFilter<$PrismaModel = never> = {
+    equals?: number | IntFieldRefInput<$PrismaModel> | null
+    in?: number[] | ListIntFieldRefInput<$PrismaModel> | null
+    notIn?: number[] | ListIntFieldRefInput<$PrismaModel> | null
+    lt?: number | IntFieldRefInput<$PrismaModel>
+    lte?: number | IntFieldRefInput<$PrismaModel>
+    gt?: number | IntFieldRefInput<$PrismaModel>
+    gte?: number | IntFieldRefInput<$PrismaModel>
+    not?: NestedIntNullableWithAggregatesFilter<$PrismaModel> | number | null
+    _count?: NestedIntNullableFilter<$PrismaModel>
+    _avg?: NestedFloatNullableFilter<$PrismaModel>
+    _sum?: NestedIntNullableFilter<$PrismaModel>
+    _min?: NestedIntNullableFilter<$PrismaModel>
+    _max?: NestedIntNullableFilter<$PrismaModel>
+  }
+
+  export type NestedFloatNullableFilter<$PrismaModel = never> = {
+    equals?: number | FloatFieldRefInput<$PrismaModel> | null
+    in?: number[] | ListFloatFieldRefInput<$PrismaModel> | null
+    notIn?: number[] | ListFloatFieldRefInput<$PrismaModel> | null
+    lt?: number | FloatFieldRefInput<$PrismaModel>
+    lte?: number | FloatFieldRefInput<$PrismaModel>
+    gt?: number | FloatFieldRefInput<$PrismaModel>
+    gte?: number | FloatFieldRefInput<$PrismaModel>
+    not?: NestedFloatNullableFilter<$PrismaModel> | number | null
   }
 
   export type NestedStringNullableWithAggregatesFilter<$PrismaModel = never> = {
@@ -6992,33 +7019,6 @@ export namespace Prisma {
     _count?: NestedIntNullableFilter<$PrismaModel>
     _min?: NestedDateTimeNullableFilter<$PrismaModel>
     _max?: NestedDateTimeNullableFilter<$PrismaModel>
-  }
-
-  export type NestedIntNullableWithAggregatesFilter<$PrismaModel = never> = {
-    equals?: number | IntFieldRefInput<$PrismaModel> | null
-    in?: number[] | ListIntFieldRefInput<$PrismaModel> | null
-    notIn?: number[] | ListIntFieldRefInput<$PrismaModel> | null
-    lt?: number | IntFieldRefInput<$PrismaModel>
-    lte?: number | IntFieldRefInput<$PrismaModel>
-    gt?: number | IntFieldRefInput<$PrismaModel>
-    gte?: number | IntFieldRefInput<$PrismaModel>
-    not?: NestedIntNullableWithAggregatesFilter<$PrismaModel> | number | null
-    _count?: NestedIntNullableFilter<$PrismaModel>
-    _avg?: NestedFloatNullableFilter<$PrismaModel>
-    _sum?: NestedIntNullableFilter<$PrismaModel>
-    _min?: NestedIntNullableFilter<$PrismaModel>
-    _max?: NestedIntNullableFilter<$PrismaModel>
-  }
-
-  export type NestedFloatNullableFilter<$PrismaModel = never> = {
-    equals?: number | FloatFieldRefInput<$PrismaModel> | null
-    in?: number[] | ListFloatFieldRefInput<$PrismaModel> | null
-    notIn?: number[] | ListFloatFieldRefInput<$PrismaModel> | null
-    lt?: number | FloatFieldRefInput<$PrismaModel>
-    lte?: number | FloatFieldRefInput<$PrismaModel>
-    gt?: number | FloatFieldRefInput<$PrismaModel>
-    gte?: number | FloatFieldRefInput<$PrismaModel>
-    not?: NestedFloatNullableFilter<$PrismaModel> | number | null
   }
 
   export type NestedDateTimeWithAggregatesFilter<$PrismaModel = never> = {
@@ -7103,7 +7103,7 @@ export namespace Prisma {
 
   export type MovieCreateWithoutGenresInput = {
     id?: string
-    tmdbId: number
+    tmdbId?: number | null
     name: string
     sinopsis?: string | null
     releaseDate?: Date | string | null
@@ -7115,7 +7115,7 @@ export namespace Prisma {
 
   export type MovieUncheckedCreateWithoutGenresInput = {
     id?: string
-    tmdbId: number
+    tmdbId?: number | null
     name: string
     sinopsis?: string | null
     releaseDate?: Date | string | null
@@ -7151,7 +7151,7 @@ export namespace Prisma {
     OR?: MovieScalarWhereInput[]
     NOT?: MovieScalarWhereInput | MovieScalarWhereInput[]
     id?: StringFilter<"Movie"> | string
-    tmdbId?: IntFilter<"Movie"> | number
+    tmdbId?: IntNullableFilter<"Movie"> | number | null
     name?: StringFilter<"Movie"> | string
     sinopsis?: StringNullableFilter<"Movie"> | string | null
     releaseDate?: DateTimeNullableFilter<"Movie"> | Date | string | null
@@ -7237,7 +7237,7 @@ export namespace Prisma {
 
   export type MovieCreateWithoutListsInput = {
     id?: string
-    tmdbId: number
+    tmdbId?: number | null
     name: string
     sinopsis?: string | null
     releaseDate?: Date | string | null
@@ -7249,7 +7249,7 @@ export namespace Prisma {
 
   export type MovieUncheckedCreateWithoutListsInput = {
     id?: string
-    tmdbId: number
+    tmdbId?: number | null
     name: string
     sinopsis?: string | null
     releaseDate?: Date | string | null
@@ -7356,7 +7356,7 @@ export namespace Prisma {
 
   export type MovieUpdateWithoutGenresInput = {
     id?: StringFieldUpdateOperationsInput | string
-    tmdbId?: IntFieldUpdateOperationsInput | number
+    tmdbId?: NullableIntFieldUpdateOperationsInput | number | null
     name?: StringFieldUpdateOperationsInput | string
     sinopsis?: NullableStringFieldUpdateOperationsInput | string | null
     releaseDate?: NullableDateTimeFieldUpdateOperationsInput | Date | string | null
@@ -7368,7 +7368,7 @@ export namespace Prisma {
 
   export type MovieUncheckedUpdateWithoutGenresInput = {
     id?: StringFieldUpdateOperationsInput | string
-    tmdbId?: IntFieldUpdateOperationsInput | number
+    tmdbId?: NullableIntFieldUpdateOperationsInput | number | null
     name?: StringFieldUpdateOperationsInput | string
     sinopsis?: NullableStringFieldUpdateOperationsInput | string | null
     releaseDate?: NullableDateTimeFieldUpdateOperationsInput | Date | string | null
@@ -7380,7 +7380,7 @@ export namespace Prisma {
 
   export type MovieUncheckedUpdateManyWithoutGenresInput = {
     id?: StringFieldUpdateOperationsInput | string
-    tmdbId?: IntFieldUpdateOperationsInput | number
+    tmdbId?: NullableIntFieldUpdateOperationsInput | number | null
     name?: StringFieldUpdateOperationsInput | string
     sinopsis?: NullableStringFieldUpdateOperationsInput | string | null
     releaseDate?: NullableDateTimeFieldUpdateOperationsInput | Date | string | null
@@ -7429,7 +7429,7 @@ export namespace Prisma {
 
   export type MovieUpdateWithoutListsInput = {
     id?: StringFieldUpdateOperationsInput | string
-    tmdbId?: IntFieldUpdateOperationsInput | number
+    tmdbId?: NullableIntFieldUpdateOperationsInput | number | null
     name?: StringFieldUpdateOperationsInput | string
     sinopsis?: NullableStringFieldUpdateOperationsInput | string | null
     releaseDate?: NullableDateTimeFieldUpdateOperationsInput | Date | string | null
@@ -7441,7 +7441,7 @@ export namespace Prisma {
 
   export type MovieUncheckedUpdateWithoutListsInput = {
     id?: StringFieldUpdateOperationsInput | string
-    tmdbId?: IntFieldUpdateOperationsInput | number
+    tmdbId?: NullableIntFieldUpdateOperationsInput | number | null
     name?: StringFieldUpdateOperationsInput | string
     sinopsis?: NullableStringFieldUpdateOperationsInput | string | null
     releaseDate?: NullableDateTimeFieldUpdateOperationsInput | Date | string | null
@@ -7453,7 +7453,7 @@ export namespace Prisma {
 
   export type MovieUncheckedUpdateManyWithoutListsInput = {
     id?: StringFieldUpdateOperationsInput | string
-    tmdbId?: IntFieldUpdateOperationsInput | number
+    tmdbId?: NullableIntFieldUpdateOperationsInput | number | null
     name?: StringFieldUpdateOperationsInput | string
     sinopsis?: NullableStringFieldUpdateOperationsInput | string | null
     releaseDate?: NullableDateTimeFieldUpdateOperationsInput | Date | string | null

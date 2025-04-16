@@ -32,7 +32,7 @@ model MovieGenre {
 
 model Movie {
   id             String @id @default(uuid())
-  tmdbId         Int @unique
+  tmdbId         Int? @unique
   name           String
   sinopsis       String?
   releaseDate    DateTime?
