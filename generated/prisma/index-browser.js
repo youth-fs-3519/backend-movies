@@ -126,6 +126,7 @@ exports.Prisma.UserScalarFieldEnum = {
 
 exports.Prisma.MovieGenreScalarFieldEnum = {
   id: 'id',
+  tmdbId: 'tmdbId',
   name: 'name'
 };
 
@@ -136,7 +137,7 @@ exports.Prisma.MovieScalarFieldEnum = {
   sinopsis: 'sinopsis',
   releaseDate: 'releaseDate',
   posterUrl: 'posterUrl',
-  ageRestriction: 'ageRestriction',
+  adult: 'adult',
   createdAt: 'createdAt'
 };
 

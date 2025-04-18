@@ -22,9 +22,9 @@ async function fetchGenres() {
 
   for (const genre of genres) {
     await prisma.movieGenre.upsert({
-      where: { id: genre.id },
+      where: { tmdbId: genre.id },
       update: { name: genre.name },
-      create: { id: genre.id, name: genre.name }
+      create: { tmdbId: genre.id, name: genre.name }
     });
   }
 
@@ -61,7 +61,8 @@ async function importMovies() {
             sinopsis: movie.overview,
             releaseDate: movie.release_date ? new Date(movie.release_date) : null,
             posterUrl,
-          }
+            adult: movie.adult,
+          },
         });
 
         // Associar gêneros
@@ -70,7 +71,7 @@ async function importMovies() {
             where: { id: createdMovie.id },
             data: {
               genres: {
-                connect: movie.genre_ids.map((id: string) => ({ id }))
+                connect: movie.genre_ids.map((id: string) => ({ tmdbId: id }))
               }
             }
           });

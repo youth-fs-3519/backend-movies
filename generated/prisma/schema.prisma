@@ -24,21 +24,22 @@ model User {
 }
 
 model MovieGenre {
-  id   Int    @id @default(autoincrement())
-  name String @unique
+  id     String @id @default(uuid())
+  tmdbId Int?   @unique
+  name   String @unique
 
   movies Movie[]
 }
 
 model Movie {
-  id             String    @id @default(uuid())
-  tmdbId         Int?      @unique
-  name           String
-  sinopsis       String?
-  releaseDate    DateTime?
-  posterUrl      String?
-  ageRestriction Int?
-  createdAt      DateTime  @default(now())
+  id          String    @id @default(uuid())
+  tmdbId      Int?      @unique
+  name        String
+  sinopsis    String?
+  releaseDate DateTime?
+  posterUrl   String?
+  adult       Boolean   @default(false)
+  createdAt   DateTime  @default(now())
 
   genres MovieGenre[]
   lists  MovieList[]

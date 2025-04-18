@@ -1,5 +1,6 @@
 import { Router } from "express";
 import { PrismaClient } from "../generated/prisma";
+import { authMiddleware } from "../middlewares/auth";
 
 const movieRouter = Router();
 const prisma = new PrismaClient();
@@ -31,13 +32,13 @@ movieRouter.get('/', async (req, res) => {
     res.json(results)
 });
 
-movieRouter.post('/', async (req, res) => {
+movieRouter.post('/', authMiddleware, async (req, res) => {
     const {
         name,
         sinopsis,
         releaseDate,
         posterUrl,
-        ageRestriction,
+        adult,
         genres,
     } = req.body;
 
@@ -49,7 +50,7 @@ movieRouter.post('/', async (req, res) => {
             sinopsis,
             releaseDate: convertedReleaseDate.toISOString(),
             posterUrl,
-            ageRestriction,
+            adult,
             genres,
         }
     });
@@ -57,14 +58,14 @@ movieRouter.post('/', async (req, res) => {
     res.json(createdMovie)
 });
 
-movieRouter.patch('/:id', async (req, res) => {
+movieRouter.patch('/:id', authMiddleware, async (req, res) => {
     const { id } = req.params;
     const {
         name,
         sinopsis,
         releaseDate,
         posterUrl,
-        ageRestriction,
+        adult,
         genres,
     } = req.body;
 
@@ -76,7 +77,7 @@ movieRouter.patch('/:id', async (req, res) => {
             sinopsis,
             releaseDate: convertedReleaseDate.toISOString(),
             posterUrl,
-            ageRestriction,
+            adult,
             genres,
         },
         where: {
@@ -85,6 +86,18 @@ movieRouter.patch('/:id', async (req, res) => {
     });
 
     res.json(updatedMovie)
-})
+});
+
+movieRouter.delete('/:id', authMiddleware, async (req, res) => {
+    const { id } = req.params;
+
+    const deleted = await prisma.movie.delete({
+        where: {
+            id
+        }
+    });
+
+    res.json(deleted)
+});
 
 export default movieRouter;

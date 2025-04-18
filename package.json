@@ -24,12 +24,15 @@
   "homepage": "https://github.com/youth-fs-3519/backend-movies#readme",
   "dependencies": {
     "@prisma/client": "^6.6.0",
+    "argon2": "^0.41.1",
     "axios": "^1.8.4",
     "dotenv": "^16.5.0",
-    "express": "^5.1.0"
+    "express": "^5.1.0",
+    "jsonwebtoken": "^9.0.2"
   },
   "devDependencies": {
     "@types/express": "^5.0.1",
+    "@types/jsonwebtoken": "^9.0.9",
     "@types/node": "^22.14.0",
     "prisma": "^6.6.0",
     "tsx": "^4.19.3",

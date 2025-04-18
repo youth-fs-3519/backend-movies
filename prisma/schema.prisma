@@ -24,24 +24,25 @@ model User {
 }
 
 model MovieGenre {
-  id          Int @id @default(autoincrement())
-  name        String @unique
+  id     String @id @default(uuid())
+  tmdbId Int?   @unique
+  name   String @unique
 
   movies Movie[]
 }
 
 model Movie {
-  id             String @id @default(uuid())
-  tmdbId         Int? @unique
-  name           String
-  sinopsis       String?
-  releaseDate    DateTime?
-  posterUrl      String?
-  ageRestriction Int?
-  createdAt      DateTime @default(now())
+  id          String    @id @default(uuid())
+  tmdbId      Int?      @unique
+  name        String
+  sinopsis    String?
+  releaseDate DateTime?
+  posterUrl   String?
+  adult       Boolean   @default(false)
+  createdAt   DateTime  @default(now())
 
-  genres  MovieGenre[]
-  lists   MovieList[]
+  genres MovieGenre[]
+  lists  MovieList[]
 }
 
 model MovieList {
@@ -51,6 +52,6 @@ model MovieList {
   public      Boolean @default(false)
 
   movies Movie[]
-  User   User   @relation(fields: [userId], references: [id])
+  User   User    @relation(fields: [userId], references: [id])
   userId String
 }
