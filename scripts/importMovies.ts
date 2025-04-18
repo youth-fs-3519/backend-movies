@@ -31,6 +31,16 @@ async function fetchGenres() {
   console.log('Gêneros salvos com sucesso!');
 }
 
+type TMDBMovie = {
+  id: number;
+  title: string;
+  overview: string;
+  release_date: string | null;
+  poster_path: string | null;
+  adult: boolean;
+  genre_ids: number[];
+};
+
 async function importMovies() {
   for (let page = 1; page <= MAX_PAGES; page++) {
     try {
@@ -47,12 +57,12 @@ async function importMovies() {
 
       if (!movies || movies.length === 0) break;
 
-      for (const movie of movies) {
+      await Promise.all(movies.map(async (movie: TMDBMovie) => {
         const posterUrl = movie.poster_path ? `${IMAGE_BASE_URL}${movie.poster_path}` : null;
 
         // Verifica se o filme já existe
         const existing = await prisma.movie.findUnique({ where: { tmdbId: movie.id } });
-        if (existing) continue;
+        if (existing) return;
 
         const createdMovie = await prisma.movie.create({
           data: {
@@ -71,14 +81,14 @@ async function importMovies() {
             where: { id: createdMovie.id },
             data: {
               genres: {
-                connect: movie.genre_ids.map((id: string) => ({ tmdbId: id }))
+                connect: movie.genre_ids.map((id) => ({ tmdbId: id }))
               }
             }
           });
         }
 
         console.log(`Salvo: ${movie.title}`);
-      }
+      }));
     } catch (err: any) {
       console.error(`Erro na página ${page}:`, err.message);
       break; // Em caso de erro contínuo, para o loop
