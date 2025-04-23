@@ -47,6 +47,7 @@ authenticationRouter.post('/login', async (req, res) => {
     }
 
     const payload = {
+        id: user.id,
         email: user.email,
         name: user.name
     }

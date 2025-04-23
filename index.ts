@@ -3,10 +3,13 @@ import { PrismaClient } from './generated/prisma';
 import movieRouter from './routes/movies';
 import authenticationRouter from './routes/authentication';
 
+import cors from 'cors';
+
 const app = express();
 const prisma = new PrismaClient();
 
 app.use(json());
+app.use(cors());
 
 app.get('/', (req, res) => {
     res.send('Hello World')
